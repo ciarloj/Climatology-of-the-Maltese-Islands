@@ -1,0 +1,82 @@
+RH saturation scan (THRESH=99.5%, flag at 15% of days)
+Looking in: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../../Data
+
+Bengħajsa
+   2015:   1.7% saturated (6/360 days)
+   2017:   0.3% saturated (1/365 days)
+   2018:   1.1% saturated (4/365 days)
+   2019:  15.6% saturated (57/365 days)  <== FLAG
+   2020:  21.6% saturated (79/366 days)  <== FLAG
+   2021:  27.3% saturated (98/359 days)  <== FLAG
+   -> saturated months span 2019-03 .. 2021-11  (set-missing candidate range 2019-03-01 .. 2021-11-30)
+
+Birkirkara
+   2016:   1.1% saturated (4/365 days)
+   2017:   1.9% saturated (7/365 days)
+   2018:   2.7% saturated (10/365 days)
+   2019:   1.9% saturated (7/365 days)
+   2020:   0.8% saturated (3/366 days)
+   2021:   7.7% saturated (28/365 days)
+   2022:   4.9% saturated (16/329 days)
+
+Dingli
+   2010:   0.3% saturated (1/356 days)
+   2016:   2.5% saturated (9/366 days)
+   2017:   4.1% saturated (15/365 days)
+   2018:   7.4% saturated (27/365 days)
+   2019:   7.9% saturated (29/365 days)
+   2020:  11.7% saturated (43/366 days)
+   2021:  11.0% saturated (40/365 days)
+   2022:   1.4% saturated (5/362 days)
+
+Giordan
+
+Luqa
+   2017:   0.3% saturated (1/365 days)
+   2019:   0.3% saturated (1/365 days)
+   2020:   0.3% saturated (1/366 days)
+   2021:   6.3% saturated (23/365 days)
+   2022:   5.2% saturated (19/365 days)
+
+San-Lawrenz
+
+Selmun
+   2015:   0.3% saturated (1/335 days)
+   2017:  12.6% saturated (46/365 days)
+   2018:  36.4% saturated (133/365 days)  <== FLAG
+   2019:  21.8% saturated (79/363 days)  <== FLAG
+   2020:  11.9% saturated (43/362 days)
+   2021:  29.9% saturated (109/365 days)  <== FLAG
+   2022:  32.4% saturated (106/327 days)  <== FLAG
+   -> saturated months span 2018-01 .. 2022-12  (set-missing candidate range 2018-01-01 .. 2022-12-31)
+
+Valletta
+   2017:   1.4% saturated (5/365 days)
+   2018:  15.9% saturated (58/365 days)  <== FLAG
+   2021:   5.8% saturated (21/365 days)
+   2022:   0.9% saturated (3/349 days)
+   -> saturated months span 2018-04 .. 2018-06  (set-missing candidate range 2018-04-01 .. 2018-06-30)
+
+Xagħra
+   2016:   1.1% saturated (4/366 days)
+   2017:  17.3% saturated (63/365 days)  <== FLAG
+   2018:  38.4% saturated (140/365 days)  <== FLAG
+   2019:  37.0% saturated (135/365 days)  <== FLAG
+   2020:  22.1% saturated (81/366 days)  <== FLAG
+   2021:   9.6% saturated (35/365 days)
+   2022:   6.3% saturated (23/363 days)
+   -> saturated months span 2017-08 .. 2020-12  (set-missing candidate range 2017-08-01 .. 2020-12-31)
+
+Xewkija
+   2012:   2.7% saturated (10/366 days)
+   2014:   3.0% saturated (11/365 days)
+   2016:   0.3% saturated (1/366 days)
+   2017:   1.9% saturated (7/365 days)
+   2018:   4.7% saturated (17/365 days)
+   2019:  20.5% saturated (75/365 days)  <== FLAG
+   2020:  25.4% saturated (93/366 days)  <== FLAG
+   2021:  28.2% saturated (100/354 days)  <== FLAG
+   2022:  16.2% saturated (57/352 days)  <== FLAG
+   -> saturated months span 2019-03 .. 2022-09  (set-missing candidate range 2019-03-01 .. 2022-09-30)
+
+Zokrija

@@ -1,0 +1,18 @@
+================================================================
+Daily_Valletta.csv  /  Wind Speed   [additive]   (input: Daily_Valletta.csv)
+================================================================
+Breaks detected (1): 2013-11
+Segment adjustments (anchor=last):
+      start .. 2013-11    n= 83  level=-1.461  adjust=+2.30
+    2013-12 .. end        n=144  level=+0.842  adjust=+0.00
+SNHT T0  before=116.5  after=3.4  CV=12.8  -> VERIFICATION PASSED
+Adjusted 2522 daily 'Wind Speed' rows (missing untouched) -> Daily_Valletta_corrected.csv
+================================================================
+Daily_Birkirkara.csv  /  Wind Speed   [additive]   (input: Daily_Birkirkara.csv)
+================================================================
+Breaks detected (1): 2012-11
+Segment adjustments (anchor=first):
+      start .. 2012-11    n= 59  level=+0.684  adjust=+0.00
+    2012-12 .. end        n=157  level=-0.257  adjust=+0.94
+SNHT T0  before=27.6  after=8.2  CV=12.7  -> VERIFICATION PASSED
+Adjusted 4778 daily 'Wind Speed' rows (missing untouched) -> Daily_Birkirkara_corrected.csv

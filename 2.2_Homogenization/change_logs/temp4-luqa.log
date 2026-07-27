@@ -1,0 +1,7 @@
+Daily_Luqa.csv  (input: Daily_Luqa.csv)
+  Temperature: 2015-10-01 -> 2015-11-30 | 61 days covered (61 newly set, 0 already missing) | neighbours: 20.88 ... 14.7 | cold drift into Dec-2015 sensor failure
+  written: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../../Data/Daily_Luqa_corrected.csv
+
+Daily_Luqa.csv  (input: Daily_Luqa.csv)
+  Temperature: 2015-09-25 -> 2015-11-30 | 67 days covered (6 newly set, 61 already missing) | neighbours: 23.27 ... 14.7 | cold drift into Dec-2015 sensor failure
+  written: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../../Data/Daily_Luqa_corrected.csv

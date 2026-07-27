@@ -1,0 +1,9 @@
+================================================================
+Daily_Dingli.csv  /  Relative Humidity   [additive]   (input: Daily_Dingli.csv)
+================================================================
+Breaks detected (1): 2024-07
+Segment adjustments (anchor=first):
+      start .. 2024-07    n=210  level=-0.312  adjust=+0.00
+    2024-08 .. end        n= 16  level=+4.100  adjust=-4.41
+SNHT T0  before=15.5  after=6.4  CV=12.8  -> VERIFICATION PASSED
+Adjusted 496 daily 'Relative Humidity' rows (missing untouched) -> Daily_Dingli_corrected.csv

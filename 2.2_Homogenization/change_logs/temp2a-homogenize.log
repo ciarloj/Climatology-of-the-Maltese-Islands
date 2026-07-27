@@ -1,0 +1,27 @@
+================================================================
+Daily_Luqa.csv  /  Temperature   [additive]   (input: Daily_Luqa.csv)
+================================================================
+Breaks detected (1): 2015-02
+Segment adjustments (anchor=last):
+      start .. 2015-02    n= 97  level=+0.146  adjust=-0.26
+    2015-03 .. end        n=130  level=-0.109  adjust=+0.00
+SNHT T0  before=17.1  after=15.4  CV=12.8  -> WARNING residual [Period('2015-12', 'M')] (lower min_seg / review)
+Adjusted 2952 daily 'Temperature' rows (missing untouched) -> Daily_Luqa_corrected.csv
+================================================================
+Daily_Dingli.csv  /  Temperature   [additive]   (input: Daily_Dingli.csv)
+================================================================
+Breaks detected (1): 2010-03
+Segment adjustments (anchor=last):
+      start .. 2010-03    n= 39  level=+0.236  adjust=-0.29
+    2010-04 .. end        n=188  level=-0.049  adjust=+0.00
+SNHT T0  before=14.4  after=8.3  CV=12.8  -> VERIFICATION PASSED
+Adjusted 1180 daily 'Temperature' rows (missing untouched) -> Daily_Dingli_corrected.csv
+================================================================
+Daily_Selmun.csv  /  Temperature   [additive]   (input: Daily_Selmun.csv)
+================================================================
+Breaks detected (1): 2008-04
+Segment adjustments (anchor=last):
+      start .. 2008-04    n= 16  level=+0.285  adjust=-0.31
+    2008-05 .. end        n=175  level=-0.026  adjust=+0.00
+SNHT T0  before=15.6  after=5.6  CV=12.6  -> VERIFICATION PASSED
+Adjusted 480 daily 'Temperature' rows (missing untouched) -> Daily_Selmun_corrected.csv

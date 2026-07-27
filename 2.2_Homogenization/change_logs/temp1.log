@@ -1,0 +1,88 @@
+================================================================
+Daily_Bengħajsa.csv  /  Temperature   [additive]   (input: Daily_Bengħajsa.csv)
+================================================================
+Breaks detected (2): 2015-12, 2023-10
+Segment adjustments (anchor=last):
+      start .. 2015-12    n=108  level=-0.131  adjust=+0.44
+    2016-01 .. 2023-10    n= 94  level=+0.066  adjust=+0.24
+    2023-11 .. end        n= 26  level=+0.308  adjust=+0.00
+SNHT T0  before=38.0  after=4.1  CV=12.8  -> VERIFICATION PASSED
+Adjusted 6137 daily 'Temperature' rows (missing untouched) -> Daily_Bengħajsa_corrected.csv
+================================================================
+Daily_Dingli.csv  /  Temperature   [additive]   (input: Daily_Dingli.csv)
+================================================================
+Breaks detected (1): 2014-08
+Segment adjustments (anchor=last):
+      start .. 2014-08    n= 92  level=-0.185  adjust=+0.31
+    2014-09 .. end        n=135  level=+0.126  adjust=+0.00
+SNHT T0  before=25.7  after=14.5  CV=12.8  -> WARNING residual [Period('2010-03', 'M')] (lower min_seg / review)
+Adjusted 2794 daily 'Temperature' rows (missing untouched) -> Daily_Dingli_corrected.csv
+================================================================
+Daily_Giordan.csv  /  Temperature   [additive]   (input: Daily_Giordan.csv)
+================================================================
+Breaks detected (1): 2014-07
+Segment adjustments (anchor=last):
+      start .. 2014-07    n= 52  level=+1.049  adjust=-1.70
+    2014-08 .. end        n= 84  level=-0.650  adjust=+0.00
+SNHT T0  before=44.6  after=48.8  CV=12.3  -> VERIFICATION PASSED
+Adjusted 4337 daily 'Temperature' rows (missing untouched) -> Daily_Giordan_corrected.csv
+================================================================
+Daily_Luqa.csv  /  Temperature   [additive]   (input: Daily_Luqa.csv)
+================================================================
+Breaks detected (1): 2015-12
+Segment adjustments (anchor=last):
+      start .. 2015-12    n=107  level=-0.162  adjust=+0.31
+    2016-01 .. end        n=120  level=+0.145  adjust=+0.00
+SNHT T0  before=22.6  after=17.0  CV=12.8  -> WARNING residual [Period('2015-02', 'M')] (lower min_seg / review)
+Adjusted 3258 daily 'Temperature' rows (missing untouched) -> Daily_Luqa_corrected.csv
+================================================================
+Daily_Birkirkara.csv  /  Temperature   [additive]   (input: Daily_Birkirkara.csv)
+================================================================
+Breaks detected (3): 2012-05, 2014-03, 2015-12
+Segment adjustments (anchor=last):
+      start .. 2012-05    n= 65  level=+0.030  adjust=+0.22
+    2012-06 .. 2014-03    n= 22  level=-1.111  adjust=+1.36
+    2014-04 .. 2015-12    n= 21  level=-0.350  adjust=+0.60
+    2016-01 .. end        n=120  level=+0.249  adjust=+0.00
+SNHT T0  before=59.8  after=3.3  CV=12.8  -> VERIFICATION PASSED
+Adjusted 3272 daily 'Temperature' rows (missing untouched) -> Daily_Birkirkara_corrected.csv
+================================================================
+Daily_Selmun.csv  /  Temperature   [additive]   (input: Daily_Selmun.csv)
+================================================================
+Breaks detected (1): 2012-06
+Segment adjustments (anchor=last):
+      start .. 2012-06    n= 66  level=-0.350  adjust=+0.53
+    2012-07 .. end        n=125  level=+0.185  adjust=+0.00
+SNHT T0  before=78.7  after=16.3  CV=12.6  -> VERIFICATION PASSED
+Adjusted 2002 daily 'Temperature' rows (missing untouched) -> Daily_Selmun_corrected.csv
+================================================================
+Daily_Valletta.csv  /  Temperature   [additive]   (input: Daily_Valletta.csv)
+================================================================
+Breaks detected (2): 2011-05, 2014-09
+Segment adjustments (anchor=last):
+      start .. 2011-05    n= 53  level=+0.195  adjust=-0.20
+    2011-06 .. 2014-09    n= 40  level=-0.244  adjust=+0.24
+    2014-10 .. end        n=134  level=-0.005  adjust=+0.00
+SNHT T0  before=36.8  after=9.5  CV=12.8  -> VERIFICATION PASSED
+Adjusted 2826 daily 'Temperature' rows (missing untouched) -> Daily_Valletta_corrected.csv
+================================================================
+Daily_Xagħra.csv  /  Temperature   [additive]   (input: Daily_Xagħra.csv)
+================================================================
+Breaks detected (1): 2021-04
+Segment adjustments (anchor=last):
+      start .. 2021-04    n=157  level=-0.060  adjust=+0.23
+    2021-05 .. end        n= 56  level=+0.167  adjust=+0.00
+SNHT T0  before=23.2  after=8.5  CV=12.7  -> VERIFICATION PASSED
+Adjusted 4794 daily 'Temperature' rows (missing untouched) -> Daily_Xagħra_corrected.csv
+================================================================
+Daily_Xewkija.csv  /  Temperature   [additive]   (input: Daily_Xewkija.csv)
+================================================================
+Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10
+Segment adjustments (anchor=last):
+      start .. 2010-02    n= 38  level=-0.165  adjust=+0.17
+    2010-03 .. 2012-05    n= 27  level=-0.380  adjust=+0.39
+    2012-06 .. 2019-05    n= 84  level=-0.035  adjust=+0.04
+    2019-06 .. 2023-10    n= 53  level=+0.363  adjust=-0.36
+    2023-11 .. end        n= 26  level=+0.006  adjust=+0.00
+SNHT T0  before=64.8  after=4.3  CV=12.8  -> VERIFICATION PASSED
+Adjusted 6137 daily 'Temperature' rows (missing untouched) -> Daily_Xewkija_corrected.csv

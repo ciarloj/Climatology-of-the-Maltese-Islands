@@ -1,0 +1,33 @@
+Station,Variable,n,T0,CV (5%),Break year,Significant
+Xewkija,Pressure,224,222.34,12.8,2015-12,YES
+Luqa,Pressure,216,193.13,12.7,2015-12,YES
+Selmun,Relative Humidity,190,160.4,12.6,2017-07,YES
+Msida,Relative Humidity,217,136.5,12.8,2014-11,YES
+Xewkija,Relative Humidity,216,118.68,12.7,2016-03,YES
+Valletta,Wind Speed,227,116.47,12.8,2013-11,YES
+Luqa,Relative Humidity,226,90.34,12.8,2015-05,YES
+Xagħra,Relative Humidity,201,84.44,12.7,2016-04,YES
+Valletta,Relative Humidity,226,80.14,12.8,2014-04,YES
+Selmun,Temperature,191,76.83,12.6,2012-06,YES
+Bengħajsa,Relative Humidity,218,75.78,12.8,2016-05,YES
+Dingli,Relative Humidity,226,67.94,12.8,2015-02,YES
+Xewkija,Temperature,228,64.81,12.8,2019-05,YES
+Msida,Temperature,228,59.82,12.8,2015-12,YES
+Msida,Solar,228,48.37,12.8,2013-12,YES
+Giordan,Temperature,136,44.59,12.3,2014-07,YES
+Bengħajsa,Temperature,228,37.98,12.8,2015-12,YES
+Luqa,Solar,224,37.24,12.8,2014-12,YES
+Valletta,Temperature,227,36.9,12.8,2011-05,YES
+Msida,Wind Speed,216,27.65,12.7,2012-11,YES
+Dingli,Temperature,227,25.76,12.8,2014-08,YES
+Luqa,Temperature,227,22.61,12.8,2015-12,YES
+Xagħra,Temperature,213,22.22,12.7,2021-04,YES
+Xagħra,Solar,201,22.02,12.7,2019-05,YES
+Giordan,Relative Humidity,137,21.37,12.3,2017-01,YES
+Selmun,Wind Speed,189,14.63,12.6,2016-03,YES
+Xagħra,Wind Speed,213,9.17,12.7,2016-03,no
+Giordan,Wind Speed,103,5.16,12.0,2013-02,no
+Dingli,Wind Speed,227,5.09,12.8,2008-02,no
+Luqa,Wind Speed,227,3.62,12.8,2007-05,no
+Xewkija,Wind Speed,227,3.53,12.8,2008-02,no
+Bengħajsa,Wind Speed,228,3.16,12.8,2025-11,no

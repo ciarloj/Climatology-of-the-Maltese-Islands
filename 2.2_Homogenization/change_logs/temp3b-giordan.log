@@ -1,0 +1,5 @@
+reading Daily_Giordan.csv
+stub level  = -1.826 C  (n=17)
+ref  level  = +0.483 C  (n=28)
+--> applying offset = +2.309 C to 2007-01-01 .. 2008-11-30
+wrote /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../../Data/Daily_Giordan_corrected.csv (700 daily rows adjusted)

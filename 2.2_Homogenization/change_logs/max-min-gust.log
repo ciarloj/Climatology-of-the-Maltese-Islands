@@ -1,0 +1,80 @@
+Daily_Bengħajsa.csv:
+  Max Temperature  2007-01-01..2015-12-31  add 0.44  (3280 values)
+  Max Temperature  2016-01-01..2023-10-31  add 0.24  (2855 values)
+  Min Temperature  2007-01-01..2015-12-31  add 0.44  (3280 values)
+  Min Temperature  2016-01-01..2023-10-31  add 0.24  (2855 values)
+  wrote Daily_Bengħajsa_corrected.csv
+
+Daily_Dingli.csv:
+  Max Temperature  2007-01-01..2014-08-31  add 0.31  (2794 values)
+  Max Temperature  2007-01-01..2010-03-31  add -0.29  (1180 values)
+  Min Temperature  2007-01-01..2014-08-31  add 0.31  (2794 values)
+  Min Temperature  2007-01-01..2010-03-31  add -0.29  (1180 values)
+  wrote Daily_Dingli_corrected.csv
+
+Daily_Giordan.csv:
+  Max Temperature  2007-01-01..2014-07-31  add -1.7  (1688 values)
+  Max Temperature  2007-01-01..2008-11-30  add 2.309  (546 values)
+  Max Temperature  2007-01-01..2008-12-31  add -0.406  (564 values)
+  Max Temperature  2011-01-01..2014-07-31  add -0.924  (1074 values)
+  Min Temperature  2007-01-01..2014-07-31  add -1.7  (1688 values)
+  Min Temperature  2007-01-01..2008-11-30  add 2.309  (546 values)
+  Min Temperature  2007-01-01..2008-12-31  add -0.406  (564 values)
+  Min Temperature  2011-01-01..2014-07-31  add -0.924  (1074 values)
+  wrote Daily_Giordan_corrected.csv
+
+Daily_Luqa.csv:
+  Max Temperature  2007-01-01..2015-12-31  add 0.31  (3188 values)
+  Max Temperature  2007-01-01..2015-02-28  add -0.26  (2882 values)
+  Max Temperature  2015-12-01..2016-01-31  set missing  (62 days)
+  Max Temperature  2015-09-25..2015-11-30  set missing  (67 days)
+  Min Temperature  2007-01-01..2015-12-31  add 0.31  (3188 values)
+  Min Temperature  2007-01-01..2015-02-28  add -0.26  (2882 values)
+  Min Temperature  2015-12-01..2016-01-31  set missing  (62 days)
+  Min Temperature  2015-09-25..2015-11-30  set missing  (67 days)
+  wrote Daily_Luqa_corrected.csv
+
+Daily_Birkirkara.csv:
+  Max Temperature  2007-01-01..2012-05-31  add 0.22  (1966 values)
+  Max Temperature  2012-06-01..2014-03-31  add 1.36  (666 values)
+  Max Temperature  2014-04-01..2015-12-31  add 0.6  (640 values)
+  Min Temperature  2007-01-01..2012-05-31  add 0.22  (1966 values)
+  Min Temperature  2012-06-01..2014-03-31  add 1.36  (666 values)
+  Min Temperature  2014-04-01..2015-12-31  add 0.6  (640 values)
+  Wind Gust        2012-12-01..2025-12-31  add 0.94  (3649 values)
+  wrote Daily_Birkirkara_corrected.csv
+
+Daily_Selmun.csv:
+  Max Temperature  2007-01-01..2012-06-30  add 0.53  (2002 values)
+  Max Temperature  2007-01-01..2008-04-30  add -0.31  (480 values)
+  Min Temperature  2007-01-01..2012-06-30  add 0.53  (2002 values)
+  Min Temperature  2007-01-01..2008-04-30  add -0.31  (480 values)
+  Wind Gust        2008-01-01..2011-12-31  multiply 1.151  (0 values)
+  Wind Gust        2012-06-01..2015-12-31  multiply 1.961  (0 values)
+  wrote Daily_Selmun_corrected.csv
+
+Daily_Valletta.csv:
+  Max Temperature  2007-01-01..2011-05-31  add -0.2  (1608 values)
+  Max Temperature  2011-06-01..2014-09-30  add 0.24  (1218 values)
+  Min Temperature  2007-01-01..2011-05-31  add -0.2  (1608 values)
+  Min Temperature  2011-06-01..2014-09-30  add 0.24  (1218 values)
+  Wind Gust        2007-01-01..2013-11-30  add -1.461  (0 values)
+  wrote Daily_Valletta_corrected.csv
+
+Daily_Xagħra.csv:
+  Max Temperature  2007-01-01..2021-04-30  add 0.23  (4791 values)
+  Min Temperature  2007-01-01..2021-04-30  add 0.23  (4791 values)
+  Wind Gust        2008-01-01..2011-12-31  multiply 1.039  (0 values)
+  Wind Gust        2012-07-01..2015-12-31  multiply 1.783  (0 values)
+  wrote Daily_Xagħra_corrected.csv
+
+Daily_Xewkija.csv:
+  Max Temperature  2007-01-01..2010-02-28  add 0.17  (1149 values)
+  Max Temperature  2010-03-01..2012-05-31  add 0.39  (823 values)
+  Max Temperature  2012-06-01..2019-05-31  add 0.04  (2556 values)
+  Max Temperature  2019-06-01..2023-10-31  add -0.36  (1614 values)
+  Min Temperature  2007-01-01..2010-02-28  add 0.17  (1149 values)
+  Min Temperature  2010-03-01..2012-05-31  add 0.39  (823 values)
+  Min Temperature  2012-06-01..2019-05-31  add 0.04  (2556 values)
+  Min Temperature  2019-06-01..2023-10-31  add -0.36  (1614 values)
+  wrote Daily_Xewkija_corrected.csv
