@@ -37,7 +37,8 @@ def load_mia(station_name):
     # Parse 'Date' and Normalize (ensure it is 00:00:00)
     if 'Date' in df.columns:
         df['Date'] = pd.to_datetime(df['Date'], dayfirst=True, errors='coerce').dt.normalize()       
-    
+        df = df[df['Date'] >= pd.Timestamp("2007-01-01")]
+   
     return df
 
 def get_basic_stats(series, mode="basic"):

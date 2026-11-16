@@ -142,6 +142,7 @@ def load_station_series(abbr, varname):
     try:
         df = pd.read_csv(filepath, header=0)
         df[DATE_COL] = pd.to_datetime(df[DATE_COL], dayfirst=True, errors="coerce")
+        df = df[df[DATE_COL] >= pd.Timestamp("2007-01-01")]
         col = COL_MAP.get(varname)
         if col is None or col not in df.columns:
             norm = lambda s: s.lower().replace(" ", "_")

@@ -110,6 +110,7 @@ def load_daily(station):
     if DATE_COL not in df.columns:
         return None
     df[DATE_COL] = pd.to_datetime(df[DATE_COL], dayfirst=True, errors="coerce")
+    df = df[df[DATE_COL] >= pd.Timestamp("2007-01-01")]
     return df.dropna(subset=[DATE_COL])
 
 def find_col(df, varname, station):
