@@ -91,6 +91,8 @@ def load_wind_data(abbr):
         return None, None
     try:
         df = pd.read_csv(filepath, header=0)
+        df[DATE_COL] = pd.to_datetime(df[DATE_COL], dayfirst=True, errors="coerce")
+        df = df[df[DATE_COL] >= pd.Timestamp("2007-01-01")]
 
         def find_col(target):
             if target in df.columns:

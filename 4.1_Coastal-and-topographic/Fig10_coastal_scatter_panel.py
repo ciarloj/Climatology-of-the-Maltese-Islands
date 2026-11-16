@@ -284,6 +284,9 @@ def main():
             trial = f"{workdir}/Data/Daily_{cand}.csv"
             if os.path.exists(trial):
                 daily_data[abbr] = pd.read_csv(trial, header=0)
+                d = pd.read_csv(trial, header=0)
+                d[DATE_COL] = pd.to_datetime(d[DATE_COL], dayfirst=True, errors="coerce")
+                daily_data[abbr] = d[d[DATE_COL] >= pd.Timestamp("2007-01-01")]
                 break
 
     fig, axes = plt.subplots(NROWS, NCOLS, figsize=(11.0, 8.5), squeeze=False)
