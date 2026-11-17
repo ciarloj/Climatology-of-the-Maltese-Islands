@@ -115,6 +115,7 @@ def load_wind_data(abbr):
             return None
 
         df["_date"] = pd.to_datetime(df[date_col], dayfirst=True, errors="coerce")
+        df = df[df["_date"] >= pd.Timestamp("2007-01-01")]
         wdir = pd.to_numeric(df[dir_col].replace(MISSING_VAL, np.nan), errors="coerce")
         wspd = pd.to_numeric(df[spd_col].replace(MISSING_VAL, np.nan), errors="coerce")
 

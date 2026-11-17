@@ -230,6 +230,7 @@ def load_station_series(abbr, varname):
     try:
         df  = pd.read_csv(filepath, header=0)
         df[DATE_COL] = pd.to_datetime(df[DATE_COL], dayfirst=True, errors="coerce")
+        df = df[df[DATE_COL] >= pd.Timestamp("2007-01-01")]
         col = COL_MAP.get(varname)
         if col is None or col not in df.columns:
             # Try normalised fallback
@@ -285,7 +286,7 @@ def create_spatial_plot(varname, stat_key, stat_values, output_dir):
     norm = mcolors.Normalize(vmin=val_min - pad, vmax=val_max + pad)
   # cmap_obj = cm.get_cmap(VAR_CMAP.get(varname, CMAP))
     raw_cmap = VAR_CMAP.get(varname, CMAP)
-    cmap_obj = raw_cmap if isinstance(raw_cmap, mcolors.Colormap) else cm.get_cmap(raw_cmap)
+    cmap_obj = raw_cmap if isinstance(raw_cmap, mcolors.Colormap) else plt.get_cmap(raw_cmap)
 
     # --- Build figure ---
     malta = load_coastline()

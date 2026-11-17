@@ -169,6 +169,7 @@ def load_daily(abbr):
     try:
         df = pd.read_csv(filepath, header=0)
         df[DATE_COL] = pd.to_datetime(df[DATE_COL], dayfirst=True, errors="coerce")
+        df = df[df[DATE_COL] >= pd.Timestamp("2007-01-01")]
         df = df.dropna(subset=[DATE_COL]).set_index(DATE_COL)
         return df
     except Exception as e:
