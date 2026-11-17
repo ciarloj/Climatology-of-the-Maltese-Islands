@@ -109,6 +109,7 @@ def compute_precip_intensity(df, w):
 def compute_cdd(df, w):
     v = pd.to_numeric(df[COL_PRECIP].replace(MISSING_VAL, np.nan), errors="coerce")
     dry = (v < WET_THRESHOLD).astype(float)
+    dry[v.isna()] = np.nan
     half = w // 2
     result = np.full(len(dry), np.nan)
     dv = dry.values
@@ -120,8 +121,10 @@ def compute_cdd(df, w):
         for val in seg:
             if val == 1.0:
                 cur += 1; mx = max(mx, cur)
-            else:
+            elif val == 0.0:
                 cur = 0
+#           else:
+#               cur = 0
         result[i] = mx
     return pd.Series(result, index=df.index)
 

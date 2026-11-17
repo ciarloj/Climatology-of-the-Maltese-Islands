@@ -130,6 +130,7 @@ def compute_cdd(df, window):
     """
     v = pd.to_numeric(df[COL_PRECIP].replace(MISSING_VAL, np.nan), errors="coerce")
     dry = (v < WET_THRESHOLD).astype(float)
+    dry[v.isna()] = np.nan
 
     half = window // 2
     result = np.full(len(dry), np.nan)
@@ -145,7 +146,7 @@ def compute_cdd(df, window):
             if val == 1.0:
                 cur_run += 1
                 max_run = max(max_run, cur_run)
-            else:
+            elif val == 0.0:
                 cur_run = 0
         result[i] = max_run
 
