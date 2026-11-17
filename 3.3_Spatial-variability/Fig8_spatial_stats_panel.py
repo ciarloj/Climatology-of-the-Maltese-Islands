@@ -153,7 +153,10 @@ def load_station_series(abbr, varname):
         series = pd.to_numeric(df[col].replace(MISSING_VAL, np.nan), errors="coerce")
         if varname in ANNUAL_SUM_VARS:
             tmp = pd.DataFrame({"date": df[DATE_COL], "val": series})
-            return tmp.groupby(tmp["date"].dt.year)["val"].sum().dropna()
+#           return tmp.groupby(tmp["date"].dt.year)["val"].sum().dropna()
+            clim   = tmp.groupby(tmp["date"].dt.month)["val"].transform("mean")
+            filled = tmp["val"].fillna(clim)
+            return filled.groupby(tmp["date"].dt.year).sum()
         return series.dropna()
     except Exception as e:
         print(f"  [warn] {abbr}/{varname}: {e}")

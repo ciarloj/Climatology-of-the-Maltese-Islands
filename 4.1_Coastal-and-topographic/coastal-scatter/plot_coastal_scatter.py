@@ -236,10 +236,12 @@ def compute_stat(df, varname, stat):
             if s is None:
                 return None
             dates = pd.to_datetime(df[DATE_COL], dayfirst=True, errors="coerce")
-            annual = (
-                pd.DataFrame({"year": dates.dt.year, "val": s})
-                .groupby("year")["val"].sum()
-            )
+            clim   = s.groupby(dates.dt.month).transform("mean")
+            annual = s.fillna(clim).groupby(dates.dt.year).sum()
+#           annual = (
+#               pd.DataFrame({"year": dates.dt.year, "val": s})
+#               .groupby("year")["val"].sum()
+#           )
             return float(annual.mean()) if len(annual) > 0 else None
 
         else:
@@ -368,7 +370,7 @@ def create_scatter(varname, stat, stat_values, distances_m, directions, elevatio
     norm    = mcolors.Normalize(vmin=val_min - pad, vmax=val_max + pad)
 
     raw_cmap = VAR_CMAP.get(varname, DEFAULT_CMAP)
-    cmap_obj = raw_cmap if isinstance(raw_cmap, mcolors.Colormap) else cm.get_cmap(raw_cmap)
+    cmap_obj = raw_cmap if isinstance(raw_cmap, mcolors.Colormap) else plt.get_cmap(raw_cmap)
 
     fig, ax = plt.subplots(figsize=(8, 6))
 
@@ -526,8 +528,13 @@ def main():
         if filepath is None:
             print(f"  {abbr}  [file not found: tried {candidates}]")
             continue
+#       try:
+#           df = pd.read_csv(filepath, header=0)
+#           daily_data[abbr] = df
         try:
             df = pd.read_csv(filepath, header=0)
+            df[DATE_COL] = pd.to_datetime(df[DATE_COL], dayfirst=True, errors="coerce")
+            df = df[df[DATE_COL] >= pd.Timestamp("2007-01-01")]
             daily_data[abbr] = df
             print(f"  {abbr:4s}  {len(df)} rows  ({os.path.basename(filepath)})")
         except Exception as e:
