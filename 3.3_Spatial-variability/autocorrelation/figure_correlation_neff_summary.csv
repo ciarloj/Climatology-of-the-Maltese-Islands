@@ -1,0 +1,5 @@
+variable,r1_min,r1_max,r_min,r_max,n_min,n_max,neff_min,neff_max,p_eff_max,pairs_total,pairs_p_ge_0.05,failing_pairs
+Precipitation,0.1852,0.2357,0.6807,0.9134,5384,6928,5004,6400,0,28,0,
+Temperature,0.9704,0.9775,0.9626,0.9982,3989,6923,107.4,180.7,3.251e-65,36,0,
+Relative Humidity,0.5678,0.6836,0.4261,0.9145,1619,6793,723.6,2896,2.026e-62,36,0,
+Wind Speed,0.4956,0.5858,0.7168,0.9309,2818,6899,1438,4061,6.112e-257,36,0,
