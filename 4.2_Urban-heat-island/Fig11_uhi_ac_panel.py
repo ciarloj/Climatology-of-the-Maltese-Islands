@@ -44,6 +44,12 @@ URBAN_STATIONS     = {"VL", "MS", "XR"}
 RURAL_STATIONS     = {"XW", "SL", "DN"}
 MONITORED_STATIONS = {"LQ", "BN", "GD"}
 
+# Elevation adjustment (Section 4.2): Tmin and mean T adjusted to sea level
+ELEVATION_ADJUST = True    # False = unadjusted version (SM)
+ELEVATIONS = {"GD":167, "XR":155, "XW":104, "SL":129, "DN":250,
+              "MS":66,  "VL":31,  "LQ":85,  "BN":36}   # Table 1, m a.s.l.
+LAPSE_RATE = 0.0065        # °C per m (6.5 °C/km)
+
 URBAN_COLOURS     = {"VL":"#e31a1c", "MS":"#33a02c", "XR":"#377eb8"}
 MONITORED_COLOURS = {"LQ":"#6a3d9a", "BN":"#ff7f00", "GD":"#777777"}
 
@@ -118,6 +124,8 @@ def compute_clims(varname, col_name, daily_data):
         s = get_daily_series(daily_data[abbr], varname, col_name)
         if s is None:
             continue
+        if ELEVATION_ADJUST and varname != "DTR":
+            s = s + LAPSE_RATE * ELEVATIONS[abbr]
         clims[abbr] = smooth(doy_climatology(s.dropna()), SMOOTH_WINDOW)
     return clims
 
@@ -215,7 +223,9 @@ def main():
                bbox_to_anchor=(0.5, 1.0), ncol=9, fontsize=9, frameon=True) 
 
     fig.tight_layout(rect=[0, 0, 1, 0.96])
-    out_path = os.path.join(OUTPUT_DIR, "figure_uhi_panel.png")
+    fname = ("figure_uhi_panel.png" if ELEVATION_ADJUST
+             else "figure_uhi_panel_no-elevation-adj.png")
+    out_path = os.path.join(OUTPUT_DIR, fname)
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     fig.savefig(out_path, dpi=200)
     plt.close(fig)
