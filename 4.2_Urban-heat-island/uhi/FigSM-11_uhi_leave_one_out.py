@@ -15,10 +15,21 @@ line in Figure 11), for minimum temperature, mean temperature, and DTR:
    Resampling whole years keeps the day-to-day autocorrelation inside each
    block, so it does not inflate the confidence.
 
+3. Elevation adjustment: both tests are run twice, without and with each
+   station's temperature adjusted to sea level using a constant lapse rate
+   (LAPSE_RATE, standard atmosphere 6.5 °C/km) and the Table 1 elevations.
+   The adjustment is a constant per station, so it shifts each curve without
+   changing its shape. It is applied to minimum and mean temperature only:
+   it cancels in DTR (Tmax and Tmin shift equally). Night-time lapse rates are
+   often weaker than the standard value, so for Tmin the adjusted result is
+   best read as a lower bound.
+
 All calculations use concurrent observations: only the days on which all eight
 MIA stations report the variable (the same dates as the matched-dates SM figure).
 The dates are NOT re-matched when a station is dropped, so the variants differ
 only in which stations are in the groups, not in which days are sampled.
+Every variant uses the same bootstrap resamples (the RNG is re-seeded each
+time), so the variants and the two adjustment modes are directly comparable.
 With matched dates, the urban-mean departure equals the smoothed day-of-year
 climatology of the daily (urban mean minus rural mean) series, as in Figure 11.
 
@@ -26,11 +37,12 @@ Usage:
     python3 FigSM-11_uhi_leave_one_out.py
 
 Output ({workdir}/analysis/uhi/):
-    uhi_leave_one_out.csv          one row per variable and variant: annual mean,
-                                   seasonal minimum and maximum of the smoothed
-                                   cycle, each with its 95% bootstrap CI
-    figure_uhi_leave_one_out.png   per variable: the full-set curve with its 95%
-                                   CI band and the six leave-one-out curves
+    uhi_leave_one_out.csv                 one row per adjustment, variable, and
+                                          variant: annual mean, seasonal minimum
+                                          and maximum of the smoothed cycle, each
+                                          with its 95% bootstrap CI
+    figure_uhi_leave_one_out.png          unadjusted: Tmin, mean T, and DTR
+    figure_uhi_leave_one_out_elevadj.png  elevation-adjusted: Tmin and mean T
 """
 
 import os
@@ -64,6 +76,15 @@ N_PERIOD_DAYS  = len(pd.date_range("2007-01-01", "2025-12-31"))
 
 N_BOOT = 1000          # bootstrap replicates
 SEED   = 42            # fixed seed, so reruns give the same CI
+
+# Elevation adjustment (Table 1 elevations, m above sea level)
+ELEVATIONS = {"GD":167, "XR":155, "XW":104, "SL":129, "DN":250,
+              "MS":66,  "VL":31,  "LQ":85,  "BN":36}
+LAPSE_RATE = 0.0065    # °C per m (standard atmosphere, 6.5 °C/km)
+ADJUSTABLE = {"Min_Temp", "Temperature"}   # cancels in DTR
+# (mode, figure file name): unadjusted first, then elevation-adjusted
+MODES = [("none",  "figure_uhi_leave_one_out.png"),
+         ("lapse", "figure_uhi_leave_one_out_elevadj.png")]
 
 # Leave-one-out curve styles: dropped urban stations solid, rural dashed
 DROP_COLOURS = {"VL":"#e31a1c", "MS":"#33a02c", "XR":"#377eb8",
@@ -157,8 +178,14 @@ def smoothed_cycle(values, doy):
 def cycle_stats(cycle):
     return np.nanmean(cycle), np.nanmin(cycle), np.nanmax(cycle)
 
-def analyse_variant(table, urban, rural, rng):
+def elevation_adjust(table):
+    """Adjust each station's temperature to sea level with a constant lapse rate."""
+    offsets = pd.Series({a: LAPSE_RATE * ELEVATIONS[a] for a in table.columns})
+    return table + offsets
+
+def analyse_variant(table, urban, rural):
     """Smoothed cycle, its stats, and bootstrap CIs for one urban/rural grouping."""
+    rng  = np.random.default_rng(SEED)   # same resamples for every variant
     d    = (table[urban].mean(axis=1) - table[rural].mean(axis=1)).values
     doy  = table.index.dayofyear.values
     year = table.index.year.values
@@ -204,20 +231,35 @@ def main():
         if df is not None:
             daily_data[a] = df
 
-    rng  = np.random.default_rng(SEED)
     rows = []
-    fig, axes = plt.subplots(3, 1, figsize=(11.0, 12.0), squeeze=False)
+    tables = {v[0]: matched_table(v[0], v[1], daily_data) for v in PANEL_VARS}
+    for mode, fig_name in MODES:
+        print(f"\n[mode] elevation adjustment: {mode}")
+        panel_vars = [v for v in PANEL_VARS if mode == "none" or v[0] in ADJUSTABLE]
+        rows += draw_mode(mode, fig_name, panel_vars, tables)
+
+    csv_path = os.path.join(OUTPUT_DIR, "uhi_leave_one_out.csv")
+    pd.DataFrame(rows).to_csv(csv_path, index=False, float_format="%.3f")
+    print(f"[saved] {csv_path}")
+
+def draw_mode(mode, fig_name, panel_vars, tables):
+    rows = []
+    n = len(panel_vars)
+    fig, axes = plt.subplots(n, 1, figsize=(11.0, 4.0 * n), squeeze=False)
     letters = list(string.ascii_lowercase)
     x = np.arange(1, 367)
     tick_pos, tick_labels = month_tick_positions()
 
-    for idx, (varname, col_name, title, unit) in enumerate(PANEL_VARS):
-        table = matched_table(varname, col_name, daily_data)
+    for idx, (varname, col_name, title, unit) in enumerate(panel_vars):
+        table = tables[varname]
+        if mode == "lapse":
+            table = elevation_adjust(table)
         ax = axes[idx][0]
 
         for label, dropped, urban, rural in variants():
-            cycle, est, ci, band, n_years = analyse_variant(table, urban, rural, rng)
+            cycle, est, ci, band, n_years = analyse_variant(table, urban, rural)
             rows.append({
+                "elevation_adjustment": mode,
                 "variable": varname, "variant": label,
                 "urban": " ".join(urban), "rural": " ".join(rural),
                 "matched_days": len(table), "years": n_years,
@@ -240,7 +282,7 @@ def main():
         ax.axhline(0, color="#555555", linewidth=0.8, linestyle=":", zorder=2)
         ax.set_xlim(1, 366)
         ax.set_xticks(tick_pos)
-        if idx == len(PANEL_VARS) - 1:
+        if idx == n - 1:
             ax.set_xticklabels(tick_labels, fontsize=10)
             ax.set_xlabel("months", fontsize=11)
         else:
@@ -248,7 +290,10 @@ def main():
         ax.set_ylabel(f"Urban−rural difference in {title} (Δ{unit})", fontsize=10)
         ax.grid(axis="y", linestyle="--", alpha=0.35)
         ax.grid(axis="x", linestyle=":", alpha=0.25)
-        ax.set_title(f"({letters[idx]}) {title}", fontsize=11, fontweight="bold", loc="left")
+        suffix = (f", adjusted to sea level ({LAPSE_RATE * 1000:.1f} °C/km)"
+                  if mode == "lapse" else "")
+        ax.set_title(f"({letters[idx]}) {title}{suffix}", fontsize=11,
+                     fontweight="bold", loc="left")
 
     handles = [mlines.Line2D([], [], color="#000000", linewidth=2.5, linestyle="--",
                              label="all stations"),
@@ -263,16 +308,13 @@ def main():
     fig.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, 1.0),
                ncol=5, fontsize=9, frameon=True)
 
-    fig.tight_layout(rect=[0, 0, 1, 0.95])
+    fig.tight_layout(rect=[0, 0, 1, 1 - 0.15 / n])
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    fig_path = os.path.join(OUTPUT_DIR, "figure_uhi_leave_one_out.png")
+    fig_path = os.path.join(OUTPUT_DIR, fig_name)
     fig.savefig(fig_path, dpi=200)
     plt.close(fig)
-
-    csv_path = os.path.join(OUTPUT_DIR, "uhi_leave_one_out.csv")
-    pd.DataFrame(rows).to_csv(csv_path, index=False, float_format="%.3f")
     print(f"[saved] {fig_path}")
-    print(f"[saved] {csv_path}")
+    return rows
 
 if __name__ == "__main__":
     main()
