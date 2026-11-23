@@ -223,6 +223,7 @@ def main():
                bbox_to_anchor=(0.5, 1.0), ncol=9, fontsize=9, frameon=True) 
 
     fig.tight_layout(rect=[0, 0, 1, 0.96])
+    fig.align_ylabels(axes[:, 0])
     fname = ("figure_uhi_panel.png" if ELEVATION_ADJUST
              else "figure_uhi_panel_no-elevation-adj.png")
     out_path = os.path.join(OUTPUT_DIR, fname)
