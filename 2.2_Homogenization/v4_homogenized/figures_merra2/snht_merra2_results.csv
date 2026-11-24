@@ -1,0 +1,51 @@
+Station,Variable,n,T0,CV (5%),Break year,Shift,Significant
+Luqa,Pressure,216,31.4,9.79,2021-06,0.21,YES
+Bengħajsa,Relative Humidity,185,14.09,9.68,2017-01,2.11,YES
+Dingli,Relative Humidity,226,12.61,9.82,2018-04,1.93,YES
+Valletta,Relative Humidity,223,10.81,9.81,2016-06,1.68,YES
+Xewkija,Min Temperature,211,9.21,9.78,2009-10,0.15,no
+Xagħra,Relative Humidity,160,9.1,9.57,2017-01,1.53,no
+Luqa,Relative Humidity,226,8.31,9.82,2020-03,1.27,no
+Selmun,Relative Humidity,90,8.29,9.07,2010-12,1.59,no
+Valletta,Max Temperature,227,8.26,9.83,2007-09,-0.41,no
+Luqa,Max Temperature,221,8.2,9.81,2007-11,-0.52,no
+Selmun,Max Temperature,191,8.17,9.71,2007-11,-0.51,no
+Luqa,Min Temperature,221,7.9,9.81,2007-04,1.07,no
+Msida,Wind Speed,216,7.33,9.79,2008-02,-2.02,no
+Xewkija,Pressure,224,6.75,9.82,2015-12,0.29,no
+Giordan,Relative Humidity,109,6.67,9.24,2013-05,2.22,no
+Valletta,Min Temperature,227,6.47,9.83,2013-05,-0.12,no
+Giordan,Max Temperature,126,6.33,9.37,2011-06,0.6,no
+Giordan,Wind Speed,103,6.32,9.19,2012-09,0.51,no
+Xagħra,Min Temperature,213,6.3,9.78,2025-08,-0.34,no
+Xewkija,Relative Humidity,173,6.24,9.63,2016-11,1.14,no
+Bengħajsa,Temperature,228,6.13,9.83,2018-11,-0.11,no
+Msida,Relative Humidity,217,6.1,9.79,2020-03,1.12,no
+Bengħajsa,Min Temperature,220,5.77,9.8,2009-08,0.2,no
+Luqa,Solar,208,5.03,9.77,2017-03,-2.61,no
+Giordan,Temperature,126,5.0,9.37,2011-11,-0.39,no
+Dingli,Max Temperature,211,4.98,9.78,2013-05,-0.19,no
+Valletta,Temperature,227,4.83,9.83,2013-10,-0.09,no
+Selmun,Temperature,191,4.81,9.71,2015-12,0.11,no
+Dingli,Wind Speed,227,4.51,9.83,2008-02,-0.62,no
+Xagħra,Temperature,197,4.5,9.73,2015-08,0.1,no
+Valletta,Wind Speed,227,4.45,9.83,2016-03,0.3,no
+Luqa,Temperature,223,4.28,9.81,2022-06,-0.14,no
+Dingli,Min Temperature,227,4.26,9.83,2007-12,0.26,no
+Xagħra,Solar,201,4.22,9.74,2019-01,-3.01,no
+Xagħra,Wind Speed,213,4.11,9.78,2017-02,-0.26,no
+Dingli,Temperature,227,4.07,9.83,2015-08,0.12,no
+Selmun,Wind Speed,189,4.05,9.7,2007-05,1.37,no
+Msida,Min Temperature,228,4.03,9.83,2024-10,-0.24,no
+Msida,Solar,199,3.92,9.74,2014-11,3.69,no
+Bengħajsa,Max Temperature,215,3.9,9.79,2023-05,0.16,no
+Giordan,Min Temperature,136,3.9,9.43,2011-11,-0.35,no
+Xewkija,Temperature,228,3.86,9.83,2018-07,-0.08,no
+Msida,Max Temperature,217,3.72,9.79,2017-08,-0.12,no
+Luqa,Wind Speed,227,3.62,9.83,2007-05,0.9,no
+Selmun,Min Temperature,191,3.62,9.71,2008-05,0.15,no
+Xewkija,Wind Speed,227,3.51,9.83,2021-10,-0.25,no
+Xagħra,Max Temperature,213,3.44,9.78,2023-06,0.18,no
+Bengħajsa,Wind Speed,228,2.83,9.83,2025-11,1.73,no
+Msida,Temperature,228,2.15,9.83,2018-04,-0.07,no
+Xewkija,Max Temperature,208,1.83,9.77,2015-09,0.08,no

@@ -1,0 +1,51 @@
+Station,Variable,n ERA5,T0 ERA5,CV (5%) ERA5,Break year ERA5,Shift ERA5,Significant ERA5,n MERRA-2,T0 MERRA-2,CV (5%) MERRA-2,Break year MERRA-2,Shift MERRA-2,Significant MERRA-2,Break gap (months),Both significant
+Bengħajsa,Max Temperature,215,9.59,9.79,2023-06,0.25,no,215,3.9,9.79,2023-05,0.16,no,1,no
+Bengħajsa,Min Temperature,220,3.84,9.8,2021-01,0.11,no,220,5.77,9.8,2009-08,0.2,no,137,no
+Bengħajsa,Relative Humidity,185,6.08,9.68,2017-05,1.33,no,185,14.09,9.68,2017-01,2.11,YES,4,no
+Bengħajsa,Temperature,228,4.34,9.83,2014-12,-0.07,no,228,6.13,9.83,2018-11,-0.11,no,47,no
+Bengħajsa,Wind Speed,228,3.16,9.83,2025-11,1.92,no,228,2.83,9.83,2025-11,1.73,no,0,no
+Dingli,Max Temperature,211,4.44,9.78,2013-04,-0.18,no,211,4.98,9.78,2013-05,-0.19,no,1,no
+Dingli,Min Temperature,227,5.13,9.83,2007-12,0.25,no,227,4.26,9.83,2007-12,0.26,no,0,no
+Dingli,Relative Humidity,226,6.19,9.82,2023-03,1.89,no,226,12.61,9.82,2018-04,1.93,YES,59,no
+Dingli,Temperature,227,8.46,9.83,2020-11,0.18,no,227,4.07,9.83,2015-08,0.12,no,63,no
+Dingli,Wind Speed,227,5.09,9.83,2008-02,-0.68,no,227,4.51,9.83,2008-02,-0.62,no,0,no
+Giordan,Max Temperature,126,8.46,9.37,2011-06,0.68,no,126,6.33,9.37,2011-06,0.6,no,0,no
+Giordan,Min Temperature,136,4.25,9.43,2011-11,-0.37,no,136,3.9,9.43,2011-11,-0.35,no,0,no
+Giordan,Relative Humidity,109,7.28,9.24,2017-01,-1.75,no,109,6.67,9.24,2013-05,2.22,no,44,no
+Giordan,Temperature,126,4.94,9.37,2011-11,-0.37,no,126,5.0,9.37,2011-11,-0.39,no,0,no
+Giordan,Wind Speed,103,5.16,9.19,2013-02,0.47,no,103,6.32,9.19,2012-09,0.51,no,5,no
+Luqa,Max Temperature,221,7.96,9.81,2008-01,-0.46,no,221,8.2,9.81,2007-11,-0.52,no,2,no
+Luqa,Min Temperature,221,8.03,9.81,2015-03,-0.19,no,221,7.9,9.81,2007-04,1.07,no,95,no
+Luqa,Pressure,216,4.25,9.79,2008-11,0.12,no,216,31.4,9.79,2021-06,0.21,YES,151,no
+Luqa,Relative Humidity,226,5.53,9.82,2025-01,2.09,no,226,8.31,9.82,2020-03,1.27,no,58,no
+Luqa,Solar,208,6.37,9.77,2018-03,-2.84,no,208,5.03,9.77,2017-03,-2.61,no,12,no
+Luqa,Temperature,223,3.66,9.81,2015-03,-0.09,no,223,4.28,9.81,2022-06,-0.14,no,87,no
+Luqa,Wind Speed,227,3.62,9.83,2007-05,0.95,no,227,3.62,9.83,2007-05,0.9,no,0,no
+Msida,Max Temperature,217,2.27,9.79,2012-02,0.11,no,217,3.72,9.79,2017-08,-0.12,no,66,no
+Msida,Min Temperature,228,3.3,9.83,2007-07,0.28,no,228,4.03,9.83,2024-10,-0.24,no,207,no
+Msida,Relative Humidity,217,4.79,9.79,2013-08,-0.85,no,217,6.1,9.79,2020-03,1.12,no,79,no
+Msida,Solar,199,5.32,9.74,2007-12,-12.97,no,199,3.92,9.74,2014-11,3.69,no,83,no
+Msida,Temperature,228,3.14,9.83,2023-06,0.11,no,228,2.15,9.83,2018-04,-0.07,no,62,no
+Msida,Wind Speed,216,8.14,9.79,2008-02,-2.22,no,216,7.33,9.79,2008-02,-2.02,no,0,no
+Selmun,Max Temperature,191,6.81,9.71,2008-01,-0.42,no,191,8.17,9.71,2007-11,-0.51,no,2,no
+Selmun,Min Temperature,191,2.83,9.71,2007-12,0.14,no,191,3.62,9.71,2008-05,0.15,no,5,no
+Selmun,Relative Humidity,90,6.17,9.07,2014-05,-5.45,no,90,8.29,9.07,2010-12,1.59,no,41,no
+Selmun,Temperature,191,5.01,9.71,2021-04,0.16,no,191,4.81,9.71,2015-12,0.11,no,64,no
+Selmun,Wind Speed,189,3.96,9.7,2007-05,1.39,no,189,4.05,9.7,2007-05,1.37,no,0,no
+Valletta,Max Temperature,227,5.13,9.83,2008-04,-0.23,no,227,8.26,9.83,2007-09,-0.41,no,7,no
+Valletta,Min Temperature,227,8.84,9.83,2013-04,-0.13,no,227,6.47,9.83,2013-05,-0.12,no,1,no
+Valletta,Relative Humidity,223,5.23,9.81,2018-03,-1.14,no,223,10.81,9.81,2016-06,1.68,YES,21,no
+Valletta,Temperature,227,9.53,9.83,2023-11,0.15,no,227,4.83,9.83,2013-10,-0.09,no,121,no
+Valletta,Wind Speed,227,3.39,9.83,2008-02,-0.55,no,227,4.45,9.83,2016-03,0.3,no,97,no
+Xagħra,Max Temperature,213,7.64,9.78,2023-06,0.28,no,213,3.44,9.78,2023-06,0.18,no,0,no
+Xagħra,Min Temperature,213,4.47,9.78,2025-03,-0.18,no,213,6.3,9.78,2025-08,-0.34,no,5,no
+Xagħra,Relative Humidity,160,3.75,9.57,2022-04,-1.11,no,160,9.1,9.57,2017-01,1.53,no,63,no
+Xagħra,Solar,201,5.02,9.74,2019-01,-3.1,no,201,4.22,9.74,2019-01,-3.01,no,0,no
+Xagħra,Temperature,197,5.88,9.73,2015-10,0.1,no,197,4.5,9.73,2015-08,0.1,no,2,no
+Xagħra,Wind Speed,213,4.53,9.78,2017-02,-0.29,no,213,4.11,9.78,2017-02,-0.26,no,0,no
+Xewkija,Max Temperature,208,4.38,9.77,2022-01,0.14,no,208,1.83,9.77,2015-09,0.08,no,76,no
+Xewkija,Min Temperature,211,7.98,9.78,2007-12,0.21,no,211,9.21,9.78,2009-10,0.15,no,22,no
+Xewkija,Pressure,224,4.0,9.82,2015-12,0.22,no,224,6.75,9.82,2015-12,0.29,no,0,no
+Xewkija,Relative Humidity,173,9.43,9.63,2019-02,-1.65,no,173,6.24,9.63,2016-11,1.14,no,27,no
+Xewkija,Temperature,228,4.26,9.83,2021-02,0.08,no,228,3.86,9.83,2018-07,-0.08,no,31,no
+Xewkija,Wind Speed,227,3.53,9.83,2008-02,-0.48,no,227,3.51,9.83,2021-10,-0.25,no,164,no
