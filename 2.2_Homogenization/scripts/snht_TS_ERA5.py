@@ -80,15 +80,22 @@ MIN_OBS = 36   # 3 years
 # Critical values at 5 % significance (Alexandersson 1986, Table 1)
 # ---------------------------------------------------------------------------
 CV_TABLE = {
-    10:  7.2,
-    20:  9.6,
-    30:  10.5,
-    40:  11.0,
-    50:  11.3,
-    70:  11.7,
-    100: 12.0,
-    200: 12.7,
-    300: 13.0,
+    10:  5.637,
+    20:  7.089,
+    30:  7.747,
+    40:  8.151,
+    50:  8.432,
+    60:  8.647,
+    70:  8.814,
+    80:  8.951,
+    90:  9.067,
+    100: 9.167,
+    125: 9.365,
+    150: 9.519,
+    175: 9.641,
+    200: 9.741,
+    250: 9.898,
+    300: 10.020,
 }
 CV_NS   = np.array(sorted(CV_TABLE.keys()), dtype=float)
 CV_VALS = np.array([CV_TABLE[n] for n in CV_NS.astype(int)], dtype=float)
@@ -239,6 +246,9 @@ def load_era5_reference(raw: bool = False) -> pd.DataFrame:
                 for t, v in s.items()}
     _tmax = _minmax(os.path.join(ERA5_DIR, "era5_monthly_tmax.nc"), "t2m_max")
     _tmin = _minmax(os.path.join(ERA5_DIR, "era5_monthly_tmin.nc"), "t2m_min")
+    if not _tmax or not _tmin:
+        print("[note] ERA5 daily max/min files not found: Max and Min Temperature "
+              "are tested against ERA5 mean 2 m temperature anomalies.")
 
     for fpath in era5_files:
         with zipfile.ZipFile(fpath) as z:
@@ -267,8 +277,10 @@ def load_era5_reference(raw: bool = False) -> pd.DataFrame:
 
                 # Temperature: K → °C
                 row["Temperature"] = float(ds_ua["t2m"][i, ilat, ilon]) - 273.15
-                row["Max Temperature"] = _tmax.get(row["Month"], np.nan)
-                row["Min Temperature"] = _tmin.get(row["Month"], np.nan)
+                row["Max Temperature"] = (_tmax.get(row["Month"], np.nan) if _tmax
+                                          else row["Temperature"])
+                row["Min Temperature"] = (_tmin.get(row["Month"], np.nan) if _tmin
+                                          else row["Temperature"])
 
                 # Pressure: Pa → hPa
                 row["Pressure"] = float(ds_ua["msl"][i, ilat, ilon]) / 100.0
@@ -369,14 +381,16 @@ def run_snht_pass(stations: dict, era5_ref: pd.DataFrame,
             significant = T0 > cv
             bp_idx      = k0 - 1 if k0 <= len(periods) else len(periods) - 1
             break_year  = str(periods[bp_idx])
+            shift       = diff[k0:].mean() - diff[:k0].mean()   # post- minus pre-break
 
             results.append({
                 "Station":     station,
                 "Variable":    variable,
                 "n":           len(diff),
                 "T0":          round(T0, 2),
-                "CV (5%)":     round(cv, 1),
+                "CV (5%)":     round(cv, 2),
                 "Break year":  break_year,
+                "Shift":       round(shift, 2),
                 "Significant": "YES" if significant else "no",
             })
 

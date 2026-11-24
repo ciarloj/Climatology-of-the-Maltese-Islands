@@ -1,0 +1,58 @@
+Copied /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data
+    -> /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data_v3
+
+Daily_Bengħajsa.csv
+  Max Temperature   2007-01-01..2015-12-31  add +0.95               3280 values  mean 22.19 -> 23.14
+  Min Temperature   2007-01-01..2015-03-31  add -0.46               3005 values  mean 17.08 -> 16.62
+  Relative Humidity 2007-01-01..2018-04-30  add +1.65               4126 values  mean 71.31 -> 72.96  (7 clipped to 0..100)
+  wrote /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data_v3/Daily_Bengħajsa.csv
+
+Daily_Xagħra.csv
+  Max Temperature   2007-01-01..2015-12-31  add +1.09               2844 values  mean 21.29 -> 22.38
+  Min Temperature   2007-01-01..2016-02-29  add -0.36               2904 values  mean 17.23 -> 16.87
+  Temperature       2024-09-01..2025-12-31  set missing  (487 values)
+  wrote /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data_v3/Daily_Xagħra.csv
+
+Daily_Luqa.csv
+  Max Temperature   2007-01-01..2015-08-31  add +1.01               3066 values  mean 22.14 -> 23.15
+  Temperature       2007-01-01..2015-09-30  add +0.16               3160 values  mean 19.12 -> 19.28
+  Solar             2007-01-01..2007-07-31  set missing  (127 values)
+  wrote /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data_v3/Daily_Luqa.csv
+
+Daily_Xewkija.csv
+  Max Temperature   2007-01-01..2015-12-31  add +0.92               3281 values  mean 21.24 -> 22.16
+  Min Temperature   2007-01-01..2016-10-31  add -0.40               3586 values  mean 17.11 -> 16.71
+  Relative Humidity 2007-01-01..2018-04-30  add +1.67               4123 values  mean 73.50 -> 75.16  (25 clipped to 0..100)
+  wrote /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data_v3/Daily_Xewkija.csv
+
+Daily_Dingli.csv
+  Max Temperature   2007-01-01..2015-12-31  add +0.96               3281 values  mean 20.02 -> 20.98
+  Min Temperature   2007-01-01..2016-05-31  add -0.25               3433 values  mean 15.75 -> 15.50
+  Relative Humidity 2007-01-01..2016-07-31  add +1.41               3464 values  mean 71.80 -> 73.21  (2 clipped to 0..100)
+  wrote /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data_v3/Daily_Dingli.csv
+
+Daily_Selmun.csv
+  Max Temperature   2007-01-01..2015-12-31  add +0.91               3281 values  mean 20.99 -> 21.90
+  Min Temperature   2007-01-01..2016-02-29  add -0.25               3327 values  mean 17.05 -> 16.80
+  Wind Speed        2007-01-01..2017-02-28  x 0.8833 (shift -0.59)  3649 values  mean 5.06 -> 4.47
+  Wind Gust         2007-01-01..2017-02-28  x 0.8833 (from Wind Speed)   410 values  mean 13.19 -> 11.65
+  wrote /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data_v3/Daily_Selmun.csv
+
+Daily_Birkirkara.csv
+  Max Temperature   2007-01-01..2015-08-31  add +0.52               3150 values  mean 22.68 -> 23.20
+  Solar             2007-01-01..2012-12-31  x 1.027 (shift +5.42)   1938 values  mean 200.41 -> 205.83
+  wrote /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data_v3/Daily_Birkirkara.csv
+
+Daily_Valletta.csv
+  Max Temperature   2007-01-01..2015-12-31  add +0.38               3283 values  mean 21.23 -> 21.61
+  wrote /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data_v3/Daily_Valletta.csv
+
+Daily_Giordan.csv
+  Max Temperature   2007-01-01..2021-11-30  add +1.69               4031 values  mean 21.51 -> 23.20
+  Temperature       2007-01-01..2021-11-30  add +0.92               4031 values  mean 19.32 -> 20.24
+  Relative Humidity 2007-01-01..2015-01-31  add +3.22               1787 values  mean 70.89 -> 74.11  (4 clipped to 0..100)
+  wrote /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data_v3/Daily_Giordan.csv
+
+25 fixes applied. Report: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../change_logs/23_residual_fixes.log
+Summary rows: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../change_logs/residual_fixes_summary.csv
+Next: rename Data -> Data_v2 and Data_v3 -> Data, then rerun both SNHT scripts.

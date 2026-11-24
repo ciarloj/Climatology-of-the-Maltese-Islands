@@ -1,39 +1,39 @@
 station,variable,start,end,type,value,comment
-Luqa,Pressure,01/12/2015,31/12/2025,addative,-1.14, +1.14 offset after 2015-11
-Luqa,Pressure,01/01/2007,31/03/2012,addative,0.1,offset applied to range to fix breaking point
-Luqa,Pressure,01/04/2012,31/01/2019,addative,-0.17,offset applied to range to fix breaking point
-Xewkija,Pressure,01/12/2015,31/12/2025,addative,-11.87,offset applied to range to fix breaking point
+Luqa,Pressure,01/12/2015,31/12/2025,additive,-1.14, +1.14 offset after 2015-11
+Luqa,Pressure,01/01/2007,31/03/2012,additive,0.1,offset applied to range to fix breaking point
+Luqa,Pressure,01/04/2012,31/01/2019,additive,-0.17,offset applied to range to fix breaking point
+Xewkija,Pressure,01/12/2015,31/12/2025,additive,-11.87,offset applied to range to fix breaking point
 Beng?ajsa,Relative Humidity,01/03/2019,30/11/2021,missing,nan,"sensor pinned at 100% (saturated, unrecoverable)"
 Selmun,Relative Humidity,01/01/2018,31/12/2022,missing,nan,"sensor pinned at 100% (saturated, unrecoverable)"
 Valletta,Relative Humidity,01/04/2018,30/06/2018,missing,nan,"sensor pinned at 100% (saturated, unrecoverable)"
 Xag?ra,Relative Humidity,01/08/2017,31/12/2020,missing,nan,"sensor pinned at 100% (saturated, unrecoverable)"
 Xewkija,Relative Humidity,01/03/2019,30/09/2022,missing,nan,"sensor pinned at 100% (saturated, unrecoverable)"
-Luqa,Relative Humidity,01/01/2007,30/04/2009,addative,-0.34,"Breaks detected (4): 2009-04, 2015-05, 2018-04, 2022-11"
-Luqa,Relative Humidity,01/05/2009,31/05/2015,addative,1.86,"Breaks detected (4): 2009-04, 2015-05, 2018-04, 2022-11"
-Luqa,Relative Humidity,01/06/2015,30/04/2018,addative,-5.33,"Breaks detected (4): 2009-04, 2015-05, 2018-04, 2022-11"
-Luqa,Relative Humidity,01/05/2018,30/11/2022,addative,-10.94,"Breaks detected (4): 2009-04, 2015-05, 2018-04, 2022-11"
-Birkirkara,Relative Humidity,01/01/2007,30/11/2014,addative,3.72,"Breaks detected (3): 2014-11, 2016-07, 2022-10"
-Birkirkara,Relative Humidity,01/12/2014,31/07/2016,addative,-6.85,"Breaks detected (3): 2014-11, 2016-07, 2022-10"
-Birkirkara,Relative Humidity,01/08/2016,31/10/2022,addative,-13.13,"Breaks detected (3): 2014-11, 2016-07, 2022-10"
-Valletta,Relative Humidity,01/01/2007,31/05/2012,addative,4.87,"Breaks detected (4): 2012-05, 2014-04, 2020-03, 2022-03"
-Valletta,Relative Humidity,01/06/2012,30/04/2014,addative,1.81,"Breaks detected (4): 2012-05, 2014-04, 2020-03, 2022-03"
-Valletta,Relative Humidity,01/05/2014,31/03/2020,addative,-2.68,"Breaks detected (4): 2012-05, 2014-04, 2020-03, 2022-03"
-Valletta,Relative Humidity,01/04/2020,31/03/2022,addative,-10.77,"Breaks detected (4): 2012-05, 2014-04, 2020-03, 2022-03"
-Xewkija,Relative Humidity,01/01/2007,31/08/2010,addative,4.51,"Breaks detected (4): 2010-08, 2012-02, 2015-11, 2022-11"
-Xewkija,Relative Humidity,01/09/2010,29/02/2012,addative,2.43,"Breaks detected (4): 2010-08, 2012-02, 2015-11, 2022-11"
-Xewkija,Relative Humidity,01/03/2012,30/11/2015,addative,-0.51,"Breaks detected (4): 2010-08, 2012-02, 2015-11, 2022-11"
-Xewkija,Relative Humidity,01/12/2015,30/11/2022,addative,-9.51,"Breaks detected (4): 2010-08, 2012-02, 2015-11, 2022-11"
-Beng?ajsa,Relative Humidity,01/01/2007,29/02/2016,addative,0.29,"Breaks detected (2): 2016-02, 2019-02"
-Beng?ajsa,Relative Humidity,01/03/2016,28/02/2019,addative,-10.14,"Breaks detected (2): 2016-02, 2019-02"
-Dingli,Relative Humidity,01/01/2007,30/11/2012,addative,-0.67,"Breaks detected (3): 2012-11, 2015-02, 2022-01"
-Dingli,Relative Humidity,01/12/2012,28/02/2015,addative,3.58,"Breaks detected (3): 2012-11, 2015-02, 2022-01"
-Dingli,Relative Humidity,01/03/2015,31/01/2022,addative,-12.22,"Breaks detected (3): 2012-11, 2015-02, 2022-01"
-Dingli,Relative Humidity,01/08/2024,31/12/2025,addative,-4.41,Breaks detected (1): 2024-07
-Xag?ra,Relative Humidity,01/01/2007,30/09/2013,addative,0.69,"Breaks detected (3): 2013-09, 2016-03, 2022-10"
-Xag?ra,Relative Humidity,01/10/2013,31/03/2016,addative,-2.28,"Breaks detected (3): 2013-09, 2016-03, 2022-10"
-Xag?ra,Relative Humidity,01/04/2016,31/10/2022,addative,-10.33,"Breaks detected (3): 2013-09, 2016-03, 2022-10"
-Giordan,Relative Humidity,01/01/2007,31/08/2013,addative,1.93,"Breaks detected (2): 2013-08, 2017-01"
-Giordan,Relative Humidity,01/09/2013,31/01/2017,addative,8.72,"Breaks detected (2): 2013-08, 2017-01"
+Luqa,Relative Humidity,01/01/2007,30/04/2009,additive,-0.34,"Breaks detected (4): 2009-04, 2015-05, 2018-04, 2022-11"
+Luqa,Relative Humidity,01/05/2009,31/05/2015,additive,1.86,"Breaks detected (4): 2009-04, 2015-05, 2018-04, 2022-11"
+Luqa,Relative Humidity,01/06/2015,30/04/2018,additive,-5.33,"Breaks detected (4): 2009-04, 2015-05, 2018-04, 2022-11"
+Luqa,Relative Humidity,01/05/2018,30/11/2022,additive,-10.94,"Breaks detected (4): 2009-04, 2015-05, 2018-04, 2022-11"
+Birkirkara,Relative Humidity,01/01/2007,30/11/2014,additive,3.72,"Breaks detected (3): 2014-11, 2016-07, 2022-10"
+Birkirkara,Relative Humidity,01/12/2014,31/07/2016,additive,-6.85,"Breaks detected (3): 2014-11, 2016-07, 2022-10"
+Birkirkara,Relative Humidity,01/08/2016,31/10/2022,additive,-13.13,"Breaks detected (3): 2014-11, 2016-07, 2022-10"
+Valletta,Relative Humidity,01/01/2007,31/05/2012,additive,4.87,"Breaks detected (4): 2012-05, 2014-04, 2020-03, 2022-03"
+Valletta,Relative Humidity,01/06/2012,30/04/2014,additive,1.81,"Breaks detected (4): 2012-05, 2014-04, 2020-03, 2022-03"
+Valletta,Relative Humidity,01/05/2014,31/03/2020,additive,-2.68,"Breaks detected (4): 2012-05, 2014-04, 2020-03, 2022-03"
+Valletta,Relative Humidity,01/04/2020,31/03/2022,additive,-10.77,"Breaks detected (4): 2012-05, 2014-04, 2020-03, 2022-03"
+Xewkija,Relative Humidity,01/01/2007,31/08/2010,additive,4.51,"Breaks detected (4): 2010-08, 2012-02, 2015-11, 2022-11"
+Xewkija,Relative Humidity,01/09/2010,29/02/2012,additive,2.43,"Breaks detected (4): 2010-08, 2012-02, 2015-11, 2022-11"
+Xewkija,Relative Humidity,01/03/2012,30/11/2015,additive,-0.51,"Breaks detected (4): 2010-08, 2012-02, 2015-11, 2022-11"
+Xewkija,Relative Humidity,01/12/2015,30/11/2022,additive,-9.51,"Breaks detected (4): 2010-08, 2012-02, 2015-11, 2022-11"
+Beng?ajsa,Relative Humidity,01/01/2007,29/02/2016,additive,0.29,"Breaks detected (2): 2016-02, 2019-02"
+Beng?ajsa,Relative Humidity,01/03/2016,28/02/2019,additive,-10.14,"Breaks detected (2): 2016-02, 2019-02"
+Dingli,Relative Humidity,01/01/2007,30/11/2012,additive,-0.67,"Breaks detected (3): 2012-11, 2015-02, 2022-01"
+Dingli,Relative Humidity,01/12/2012,28/02/2015,additive,3.58,"Breaks detected (3): 2012-11, 2015-02, 2022-01"
+Dingli,Relative Humidity,01/03/2015,31/01/2022,additive,-12.22,"Breaks detected (3): 2012-11, 2015-02, 2022-01"
+Dingli,Relative Humidity,01/08/2024,31/12/2025,additive,-4.41,Breaks detected (1): 2024-07
+Xag?ra,Relative Humidity,01/01/2007,30/09/2013,additive,0.69,"Breaks detected (3): 2013-09, 2016-03, 2022-10"
+Xag?ra,Relative Humidity,01/10/2013,31/03/2016,additive,-2.28,"Breaks detected (3): 2013-09, 2016-03, 2022-10"
+Xag?ra,Relative Humidity,01/04/2016,31/10/2022,additive,-10.33,"Breaks detected (3): 2013-09, 2016-03, 2022-10"
+Giordan,Relative Humidity,01/01/2007,31/08/2013,additive,1.93,"Breaks detected (2): 2013-08, 2017-01"
+Giordan,Relative Humidity,01/09/2013,31/01/2017,additive,8.72,"Breaks detected (2): 2013-08, 2017-01"
 Selmun,Relative Humidity,01/07/2014,31/12/2025,missing,nan,spurious jump at record end (<6 months)
 Birkirkara,Solar,21/12/2012,30/12/2013,missing,nan,dead/degraded pyranometer
 Luqa,Solar,22/12/2014,31/12/2015,missing,nan,dead/degraded pyranometer
@@ -50,32 +50,32 @@ Luqa,Solar,27/04/2019,-,missing,nan,"outlier value, exceeds x1.10 of 99% "
 Luqa,Solar,28/04/2019,-,missing,nan,"outlier value, exceeds x1.10 of 99% "
 Luqa,Solar,29/04/2019,-,missing,nan,"outlier value, exceeds x1.10 of 99% "
 Luqa,Solar,30/04/2019,-,missing,nan,"outlier value, exceeds x1.10 of 99% "
-Beng?ajsa,Temperature/Max/Min,01/01/2007,31/12/2015,addative,0.44,"Breaks detected (2): 2015-12, 2023-10"
-Beng?ajsa,Temperature/Max/Min,01/01/2016,31/10/2023,addative,0.24,"Breaks detected (2): 2015-12, 2023-10"
-Dingli,Temperature/Max/Min,01/01/2007,31/08/2014,addative,0.31,Breaks detected (1): 2014-08
-Dingli,Temperature/Max/Min,01/01/2007,31/03/2010,addative,-0.29,Breaks detected (1): 2010-03
-Giordan,Temperature/Max/Min,01/01/2007,31/07/2014,addative,-1.7,Breaks detected (1): 2014-07
-Giordan,Temperature/Max/Min,01/01/2007,30/11/2008,addative,2.309,stub level  = -1.826 C  (n=17); ref  level  = +0.483 C  (n=28)
-Giordan,Temperature/Max/Min,01/01/2007,31/12/2008,addative,-0.406,offset -0.406
-Giordan,Temperature/Max/Min,01/01/2011,31/07/2014,addative,-0.924,offset -0.924
-Luqa,Temperature/Max/Min,01/01/2007,31/12/2015,addative,0.31,Breaks detected (1): 2015-12
-Luqa,Temperature/Max/Min,01/01/2007,28/02/2015,addative,-0.26,Breaks detected (1): 2015-02
+Beng?ajsa,Temperature/Max/Min,01/01/2007,31/12/2015,additive,0.44,"Breaks detected (2): 2015-12, 2023-10"
+Beng?ajsa,Temperature/Max/Min,01/01/2016,31/10/2023,additive,0.24,"Breaks detected (2): 2015-12, 2023-10"
+Dingli,Temperature/Max/Min,01/01/2007,31/08/2014,additive,0.31,Breaks detected (1): 2014-08
+Dingli,Temperature/Max/Min,01/01/2007,31/03/2010,additive,-0.29,Breaks detected (1): 2010-03
+Giordan,Temperature/Max/Min,01/01/2007,31/07/2014,additive,-1.7,Breaks detected (1): 2014-07
+Giordan,Temperature/Max/Min,01/01/2007,30/11/2008,additive,2.309,stub level  = -1.826 C  (n=17); ref  level  = +0.483 C  (n=28)
+Giordan,Temperature/Max/Min,01/01/2007,31/12/2008,additive,-0.406,offset -0.406
+Giordan,Temperature/Max/Min,01/01/2011,31/07/2014,additive,-0.924,offset -0.924
+Luqa,Temperature/Max/Min,01/01/2007,31/12/2015,additive,0.31,Breaks detected (1): 2015-12
+Luqa,Temperature/Max/Min,01/01/2007,28/02/2015,additive,-0.26,Breaks detected (1): 2015-02
 Luqa,Temperature/Max/Min,01/12/2015,31/01/2016,missing,nan,"isolated 1-2 month cold transient, not a step"
 Luqa,Temperature/Max/Min,25/09/2015,30/11/2015,missing,nan,cold drift into Dec-2015 sensor failure
-Birkirkara,Temperature/Max/Min,01/01/2007,31/05/2012,addative,0.22,"Breaks detected (3): 2012-05, 2014-03, 2015-12"
-Birkirkara,Temperature/Max/Min,01/06/2012,31/03/2014,addative,1.36,"Breaks detected (3): 2012-05, 2014-03, 2015-12"
-Birkirkara,Temperature/Max/Min,01/04/2014,31/12/2015,addative,0.6,"Breaks detected (3): 2012-05, 2014-03, 2015-12"
-Selmun,Temperature/Max/Min,01/01/2007,30/06/2012,addative,0.53,Breaks detected (1): 2012-06
-Selmun,Temperature/Max/Min,01/01/2007,30/04/2008,addative,-0.31,Breaks detected (1): 2008-04
-Valletta,Temperature/Max/Min,01/01/2007,31/05/2011,addative,-0.2,"Breaks detected (2): 2011-05, 2014-09"
-Valletta,Temperature/Max/Min,01/06/2011,30/09/2014,addative,0.24,"Breaks detected (2): 2011-05, 2014-09"
-Xag?ra,Temperature/Max/Min,01/01/2007,30/04/2021,addative,0.23,Breaks detected (1): 2021-04
-Xewkija,Temperature/Max/Min,01/01/2007,2010-0228,addative,0.17,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
-Xewkija,Temperature/Max/Min,01/03/2010,31/05/2012,addative,0.39,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
-Xewkija,Temperature/Max/Min,01/06/2012,31/05/2019,addative,0.04,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
-Xewkija,Temperature/Max/Min,01/06/2019,31/10/2023,addative,-0.36,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
-Valletta,Wind speed/Gust,01/01/2007,30/11/2013,addative,-1.461,Breaks detected (1): 2013-11
-Birkirkara,Wind speed/Gust,01/12/2012,31/12/2025,addative,0.94,Breaks detected (1): 2012-11
+Birkirkara,Temperature/Max/Min,01/01/2007,31/05/2012,additive,0.22,"Breaks detected (3): 2012-05, 2014-03, 2015-12"
+Birkirkara,Temperature/Max/Min,01/06/2012,31/03/2014,additive,1.36,"Breaks detected (3): 2012-05, 2014-03, 2015-12"
+Birkirkara,Temperature/Max/Min,01/04/2014,31/12/2015,additive,0.6,"Breaks detected (3): 2012-05, 2014-03, 2015-12"
+Selmun,Temperature/Max/Min,01/01/2007,30/06/2012,additive,0.53,Breaks detected (1): 2012-06
+Selmun,Temperature/Max/Min,01/01/2007,30/04/2008,additive,-0.31,Breaks detected (1): 2008-04
+Valletta,Temperature/Max/Min,01/01/2007,31/05/2011,additive,-0.2,"Breaks detected (2): 2011-05, 2014-09"
+Valletta,Temperature/Max/Min,01/06/2011,30/09/2014,additive,0.24,"Breaks detected (2): 2011-05, 2014-09"
+Xag?ra,Temperature/Max/Min,01/01/2007,30/04/2021,additive,0.23,Breaks detected (1): 2021-04
+Xewkija,Temperature/Max/Min,01/01/2007,2010-0228,additive,0.17,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
+Xewkija,Temperature/Max/Min,01/03/2010,31/05/2012,additive,0.39,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
+Xewkija,Temperature/Max/Min,01/06/2012,31/05/2019,additive,0.04,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
+Xewkija,Temperature/Max/Min,01/06/2019,31/10/2023,additive,-0.36,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
+Valletta,Wind speed/Gust,01/01/2007,30/11/2013,additive,-1.461,Breaks detected (1): 2013-11
+Birkirkara,Wind speed/Gust,01/12/2012,31/12/2025,additive,0.94,Breaks detected (1): 2012-11
 Xag?ra,Wind speed/Gust,01/01/2008,31/12/2011,multiplicative,x1.039,S1 2008-01..2011-12: n=45  -> factor x1.039
 Xag?ra,Wind speed/Gust,01/07/2012,31/12/2015,multiplicative,x1.783,S2 2012-07..2015-12: n=42  -> factor x1.783
 Selmun,Wind speed/Gust,01/01/2008,31/12/2011,multiplicative,x1.151,S1 2008-01..2011-12: n=48  -> factor x1.151

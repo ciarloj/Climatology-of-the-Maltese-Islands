@@ -1,0 +1,26 @@
+station,variable,start,end,type,value,comment
+Bengħajsa,Max Temperature,01/01/2007,31/12/2015,additive,0.95,v3: TMX break 2015-12
+Bengħajsa,Min Temperature,01/01/2007,31/03/2015,additive,-0.46,v3: TMN break 2015-03
+Bengħajsa,Relative Humidity,01/01/2007,30/04/2018,additive,1.65,v3: RH break 2018-04
+Xagħra,Max Temperature,01/01/2007,31/12/2015,additive,1.09,v3: TMX break 2015-12
+Xagħra,Min Temperature,01/01/2007,29/02/2016,additive,-0.36,v3: TMN break 2016-02
+Xagħra,Temperature,01/09/2024,31/12/2025,missing,,"v3: TAV break 2024-08; post-break segment 16 months (< 24-month minimum), too short to adjust"
+Luqa,Max Temperature,01/01/2007,31/08/2015,additive,1.01,v3: TMX break 2015-08
+Luqa,Temperature,01/01/2007,30/09/2015,additive,0.16,v3: TAV break 2015-09
+Luqa,Solar,01/01/2007,31/07/2007,missing,,v3: SR break 2007-07 at record start; 7 months too short for a gain factor
+Xewkija,Max Temperature,01/01/2007,31/12/2015,additive,0.92,v3: TMX break 2015-12
+Xewkija,Min Temperature,01/01/2007,31/10/2016,additive,-0.4,v3: TMN break 2016-10
+Xewkija,Relative Humidity,01/01/2007,30/04/2018,additive,1.67,v3: RH break 2018-04 (MERRA-2: 2016-11)
+Dingli,Max Temperature,01/01/2007,31/12/2015,additive,0.96,v3: TMX break 2015-12
+Dingli,Min Temperature,01/01/2007,31/05/2016,additive,-0.25,v3: TMN break 2016-05
+Dingli,Relative Humidity,01/01/2007,31/07/2016,additive,1.41,v3: RH break 2016-07
+Selmun,Max Temperature,01/01/2007,31/12/2015,additive,0.91,v3: TMX break 2015-12
+Selmun,Min Temperature,01/01/2007,29/02/2016,additive,-0.25,v3: TMN break 2016-02
+Selmun,Wind Speed,01/01/2007,28/02/2017,multiplicative,0.8833,v3: WS break 2017-02 (gain factor)
+Selmun,Wind Gust,01/01/2007,28/02/2017,multiplicative,0.8833,v3: inherits the WS factor (same anemometer)
+Birkirkara,Max Temperature,01/01/2007,31/08/2015,additive,0.52,v3: TMX break 2015-08
+Birkirkara,Solar,01/01/2007,31/12/2012,multiplicative,1.027,v3: SR break 2012-12 (before dead-sensor gap)
+Valletta,Max Temperature,01/01/2007,31/12/2015,additive,0.38,v3: TMX break 2015-12
+Giordan,Max Temperature,01/01/2007,30/11/2021,additive,1.69,v3: TMX break 2021-11
+Giordan,Temperature,01/01/2007,30/11/2021,additive,0.92,v3: TAV break 2021-11
+Giordan,Relative Humidity,01/01/2007,31/01/2015,additive,3.22,v3: RH break 2015-01
