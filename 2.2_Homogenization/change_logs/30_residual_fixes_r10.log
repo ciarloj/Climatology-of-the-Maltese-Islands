@@ -1,0 +1,9 @@
+Round 10: fixing files in /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data
+
+Daily_Giordan.csv
+  Temperature       2007-01-01..2014-01-31  add +0.45               1512 values  mean 19.24 -> 19.69
+  wrote Daily_Giordan.csv
+
+1 fixes applied. Report: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../change_logs/30_residual_fixes_r10.log
+Summary rows: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../change_logs/residual_fixes_summary_r10.csv
+Next: rerun both SNHT scripts.

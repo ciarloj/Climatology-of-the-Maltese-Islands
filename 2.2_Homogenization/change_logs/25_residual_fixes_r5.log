@@ -1,0 +1,26 @@
+Round 5: fixing files in /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data
+
+Daily_Birkirkara.csv
+  Max Temperature   2007-01-01..2007-11-30  set missing  (322 values)
+  Solar             2025-04-01..2025-12-31  set missing  (275 values)
+  wrote Daily_Birkirkara.csv
+
+Daily_Xewkija.csv
+  Max Temperature   2007-01-01..2008-01-31  set missing  (390 values)
+  wrote Daily_Xewkija.csv
+
+Daily_Dingli.csv
+  Max Temperature   2007-01-01..2023-06-30  add +0.37               5539 values  mean 21.08 -> 21.45
+  wrote Daily_Dingli.csv
+
+Daily_Valletta.csv
+  Max Temperature   2007-01-01..2013-05-31  add -0.22               2339 values  mean 21.72 -> 21.50
+  wrote Daily_Valletta.csv
+
+Daily_Xagħra.csv
+  Min Temperature   2007-01-01..2013-09-30  add +0.13               2022 values  mean 16.63 -> 16.76
+  wrote Daily_Xagħra.csv
+
+6 fixes applied. Report: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../change_logs/25_residual_fixes_r5.log
+Summary rows: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../change_logs/residual_fixes_summary_r5.csv
+Next: rerun both SNHT scripts.

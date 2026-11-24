@@ -1,0 +1,24 @@
+Round 9: fixing files in /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data
+
+Daily_Giordan.csv
+  Max Temperature   2007-01-01..2011-12-31  add -0.87                893 values  mean 22.51 -> 21.64
+  Temperature       2007-01-01..2011-12-31  add -0.58                893 values  mean 20.04 -> 19.46
+  Relative Humidity 2007-01-01..2008-11-30  set missing  (545 values)
+  wrote Daily_Giordan.csv
+
+Daily_Xewkija.csv
+  Max Temperature   2007-01-01..2017-08-31  add -0.17               3500 values  mean 22.49 -> 22.32
+  Min Temperature   2024-08-01..2025-12-31  set missing  (518 values)
+  wrote Daily_Xewkija.csv
+
+Daily_Luqa.csv
+  Solar             2007-01-01..2021-04-30  x 1.0246 (shift +5.29)  4613 values  mean 214.85 -> 220.14
+  wrote Daily_Luqa.csv
+
+Daily_Bengħajsa.csv
+  Min Temperature   2007-01-01..2022-09-30  add -0.23               5503 values  mean 16.98 -> 16.75
+  wrote Daily_Bengħajsa.csv
+
+7 fixes applied. Report: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../change_logs/29_residual_fixes_r9.log
+Summary rows: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../change_logs/residual_fixes_summary_r9.csv
+Next: rerun both SNHT scripts.

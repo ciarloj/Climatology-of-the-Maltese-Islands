@@ -1,0 +1,13 @@
+Round 8: fixing files in /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data
+
+Daily_Giordan.csv
+  Relative Humidity 2007-01-01..2020-11-30  add -3.58               3435 values  mean 74.47 -> 70.89
+  wrote Daily_Giordan.csv
+
+Daily_Xewkija.csv
+  Max Temperature   2007-01-01..2023-06-30  add +0.27               5417 values  mean 22.06 -> 22.33
+  wrote Daily_Xewkija.csv
+
+2 fixes applied. Report: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../change_logs/28_residual_fixes_r8.log
+Summary rows: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../change_logs/residual_fixes_summary_r8.csv
+Next: rerun both SNHT scripts.

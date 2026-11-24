@@ -1,0 +1,9 @@
+Round 6: fixing files in /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/Data
+
+Daily_Luqa.csv
+  Solar             2007-01-01..2013-10-31  x 0.9824 (shift -3.92)  2270 values  mean 222.16 -> 218.24
+  wrote Daily_Luqa.csv
+
+1 fixes applied. Report: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../change_logs/26_residual_fixes_r6.log
+Summary rows: /mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/scripts/SNHT/../change_logs/residual_fixes_summary_r6.csv
+Next: rerun both SNHT scripts.
