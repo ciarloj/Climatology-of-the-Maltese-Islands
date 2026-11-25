@@ -9,9 +9,9 @@ longitude (bottom) and latitude (left) labelling.
 All panels show the MEAN of each variable.
 
 Usage:
-    python3 figure_spatial_panel.py
+    python3 Fig8_spatial_panel.py
 
-Output: {workdir}/analysis/spatial/figure_spatial_panel.png
+Output: {workdir}/analysis/spatial/Fig8_spatial_panel.png
 """
 
 import os
@@ -266,7 +266,7 @@ def main():
 
     fig.subplots_adjust(left=0.07, right=0.98, top=0.96, bottom=0.05,
                     wspace=0.05, hspace=0.01)
-    out_path = os.path.join(OUTPUT_DIR, "figure_spatial_panel.png")
+    out_path = os.path.join(OUTPUT_DIR, "Fig8_spatial_panel.png")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     fig.savefig(out_path, dpi=200, bbox_inches="tight")
     plt.close(fig)

@@ -6,9 +6,9 @@ shared colourbar and a single shared legend.
 Reuses the computation logic from plot_correlation_heatmaps.py.
 
 Usage:
-    python3 figure_correlation_panel.py
+    python3 Fig9_correlation_panel.py
 
-Output: {workdir}/analysis/corr_analysis/figure_correlation_panel.png
+Output: {workdir}/analysis/corr_analysis/Fig9_correlation_panel.png
 """
 
 import os
@@ -105,6 +105,7 @@ def build_matrices(varname, station_data):
     n = len(STATIONS)
     corr = pd.DataFrame(np.full((n, n), np.nan), index=STATIONS, columns=STATIONS)
     pval = pd.DataFrame(np.full((n, n), np.nan), index=STATIONS, columns=STATIONS)
+    nobs = pd.DataFrame(np.full((n, n), np.nan), index=STATIONS, columns=STATIONS)
     series_dict, has_data = {}, {}
     for stn in STATIONS:
         if stn in EXCLUDE_STATIONS.get(varname, set()):
@@ -128,6 +129,7 @@ def build_matrices(varname, station_data):
             if i == j:
                 corr.loc[s1, s2] = 1.0
                 pval.loc[s1, s2] = 0.0
+                nobs.loc[s1, s2] = len(series_dict[s1])
                 continue
             joined = pd.concat([series_dict[s1], series_dict[s2]], axis=1,
                                join="inner").dropna()
@@ -137,9 +139,10 @@ def build_matrices(varname, station_data):
                 r, p = pearsonr(joined.iloc[:, 0], joined.iloc[:, 1])
                 corr.loc[s1, s2] = r
                 pval.loc[s1, s2] = p
+                nobs.loc[s1, s2] = len(joined)
             except Exception:
                 pass
-    return corr, pval, has_data
+    return corr, pval, nobs, has_data
 
 # ---------------------------------------------------------------------------
 # Drawing one heatmap onto an axis
@@ -190,6 +193,18 @@ def draw_heatmap(ax, corr, pval, has_data, norm, cmap, show_xlabels, show_ylabel
 # Main
 # ---------------------------------------------------------------------------
 
+def write_nobs_csv(varname, nobs):
+    """Overlapping days (n) behind each heatmap cell. Same layout as the figure:
+    blank = grey (no data) cell; diagonal = the station's own valid days."""
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    out = nobs.rename(index=DISPLAY_NAME_OVERRIDES, columns=DISPLAY_NAME_OVERRIDES)
+    fp = os.path.join(OUTPUT_DIR, f"Fig9_correlation_nobs_{varname.replace(' ', '_')}.csv")
+    out.to_csv(fp, float_format="%.0f")
+    off = nobs.values[~np.eye(len(STATIONS), dtype=bool)]
+    off = off[~np.isnan(off)]
+    if off.size:
+        print(f"  [n] {varname:18s} pairwise n = {off.min():.0f} to {off.max():.0f} days")
+
 def main():
     print("[load] Reading station files (2007–2025) ...")
     station_data = {}
@@ -202,8 +217,9 @@ def main():
     mats = {}
     global_min = 1.0
     for varname in PANEL_VARS:
-        corr, pval, has_data = build_matrices(varname, station_data)
+        corr, pval, nobs, has_data = build_matrices(varname, station_data)
         mats[varname] = (corr, pval, has_data)
+        write_nobs_csv(varname, nobs)
         n = len(STATIONS)
         for i in range(n):
             for j in range(n):
@@ -259,7 +275,7 @@ def main():
     cb.set_label("Pearson correlation coefficient", fontsize=9)
     cb.ax.tick_params(labelsize=8)
 
-    out_path = os.path.join(OUTPUT_DIR, "figure_correlation_panel.png")
+    out_path = os.path.join(OUTPUT_DIR, "Fig9_correlation_panel.png")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     fig.savefig(out_path, dpi=200)
     plt.close(fig)
