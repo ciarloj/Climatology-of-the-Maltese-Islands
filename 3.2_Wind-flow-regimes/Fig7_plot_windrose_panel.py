@@ -5,9 +5,9 @@ Produces a panel of wind roses, one per station, showing wind speed
 and direction distributions. Stations without sufficient data are omitted.
 
 Usage:
-    python3 plot_windrose_panel.py
+    python3 Fig7_plot_windrose_panel.py
 
-Output: ../../analysis/windrose/windrose_panel.png
+Output: ../../analysis/windrose/Fig7_windrose_panel.png
 Input:  ../../Data/Daily_{station}.csv
 """
 
@@ -76,7 +76,7 @@ SPEED_COLOURS = ["#c7e9b4", "#41ab5d", "#41b6c4", "#2c7fb8", "#253494"]
 N_COLS = 3
 
 # Output
-OUTPUT_PATH = f"{workdir}/analysis/windrose/windrose_panel.png"
+OUTPUT_PATH = f"{workdir}/analysis/windrose/Fig7_windrose_panel.png"
 
 # ---------------------------------------------------------------------------
 # Data loading
