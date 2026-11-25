@@ -71,7 +71,7 @@ VARLABELS = {
     "Max_Temperature":   "Max Temperature",
     "Min_Temperature":   "Min Temperature",
     "Relative_Humidity": "Relative Humidity",
-    "Solar":             "Solar Radiance",
+    "Solar":             "Solar Radiation",
     "Wind_Direction":    "Wind Direction",
     "Wind_Gust":         "Wind Gust",
     "Wind_Speed":        "Wind Speed",
@@ -264,7 +264,7 @@ def create_spider_plot(data, stations, mode, output_dir):
                title_fontsize=10)
 
     os.makedirs(output_dir, exist_ok=True)
-    fname    = f"spider_data-completion_{mode}.png"
+    fname    = f"Fig3_spider_data-completion_{mode}.png"
     out_path = os.path.join(output_dir, fname)
     plt.savefig(out_path, dpi=150, bbox_inches="tight")
     plt.close(fig)
