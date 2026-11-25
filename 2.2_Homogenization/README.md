@@ -9,7 +9,7 @@ Each station series was tested with the relative Standard Normal Homogeneity Tes
 - All scripts sit in `scripts/` and import paths, loaders, the SNHT, and the critical values from `snht_TS_ERA5.py`.
 - Rounds 1–2: correction scripts never overwrite their input. Each writes `Daily_<station>_corrected.csv`, which then replaced `Daily_<station>.csv` before the next step, so every step reads the output of the previous one. After each step, `snht_TS_ERA5.py` was rerun to check the result.
 - Rounds 3–10: `apply_residual_fixes.py` applies the fixes in place to the files in `Data`, starting from the v2 data (rounds 1–2 output).
-- GitHub holds one copy of each script, set to the configuration of its last run. The table below gives the configuration of every run, so any step can be reproduced by setting those values. "Local copy" is the per-run copy kept during the work.
+- GitHub holds one copy of each script, set to the configuration of its last run. The table below gives the configuration of every run, so any step can be reproduced by setting those values.
 - Every adjustment is listed in `change_logs/Changes_summary.csv` (rounds 1–2), `change_logs/residual_fixes_summary.csv` (round 3), and `residual_fixes_summary_r4.csv` to `_r8.csv` (rounds 4–8).
 
 ## Run order
@@ -18,40 +18,40 @@ Each station series was tested with the relative Standard Normal Homogeneity Tes
 
 | Step | Script | Configuration | Output |
 |---|---|---|---|
-| D1 | `download_era5.py` | ERA5 monthly means, 2007–2025 | `Data/ERA5/era5_monthly_YYYY.nc` |
+| D1 | `ref-data/download_era5.py` | ERA5 monthly means, 2007–2025 | `Data/ERA5/era5_monthly_YYYY.nc` |
 | D2 | `snht_TS_ERA5.py` | All stations and variables against ERA5 | `v1_originals/` |
 
 An earlier version, `snht_TS.py`, tested each station against the other stations. It was set aside because several breaks are synchronous across the network (notably at the 2015/16 boundary) and would contaminate a station-based reference.
 
 ### Rounds 1–2 (June 2026)
 
-| Step | Script | Local copy | Configuration | Log |
-|---|---|---|---|---|
-| 1 | `apply_step_fix.py` | `apply_step_fix_pressure-xewkija.py` | Xewkija Pressure, BREAK 2015-11; −11.87 hPa from 2015-12 | `01_pressure-xewkija.log` |
-| 2 | `apply_set_missing.py` | `apply_set_missing_solar1-msida-luqa.py` | Solar set missing: Msida 2012-12-21 to 2013-12-30; Luqa 2014-12-22 to 2015-12-31 (dead pyranometer) | `02_solar1.log` |
-| 3 | `apply_step_fix.py` | `apply_step_fix_pressure-luqa.py` | Luqa Pressure, BREAK 2015-11; −1.14 hPa from 2015-12 (residual break remained) | `03_pressure-luqa1.log` |
-| 4 | `homogenize_steps.py` | `homogenize_steps-pressure.py` | Luqa Pressure, MIN_SEG 24, ANCHOR last; breaks 2012-03 and 2019-01 | `04_pressure-luqa2.log` |
-| 5 | `homogenize.py` | `homogenize-solar.py` | Solar, multiplicative, anchor last; Luqa (min_seg 18), Xagħra (12), Msida (18) | `05_solar2.log` |
-| 6 | `apply_set_missing.py` | `apply_set_missing_solar3-msida.py` | Msida Solar 2007-01-01 to 2007-08-31 (record-start spike, too short to scale) | `06_solar3.log` |
-| 7 | `rh_saturation_scan.py` | same | THRESH 99.5%, FLAG_FRAC 0.15; report only | `07_rh0-sat-scan.log` |
-| 8 | `apply_set_missing.py` | `apply_set_missing_rh1.py` | RH saturated spans: BN 2019-03 to 2021-11; SL 2018-01 to 2022-12; VL 2018-04 to 2018-06; XR 2017-08 to 2020-12; XW 2019-03 to 2022-09 | `08_rh1.log` |
-| 9 | `homogenize.py` | `homogenize-rh2.py` | RH at all stations, additive, min_seg 18, anchor last, clip (0, 100) | `09_rh2.log` |
-| 10 | `apply_set_missing.py` | `apply_set_missing_rh3-selmun.py` | Selmun RH 2017-07-01 to 2025-12-31 (jump at record end) | `10_rh3-selmun.log` |
-| 11 | `homogenize.py` | `homogenize-rh3-dingli.py` | Dingli RH, additive, min_seg 12, anchor first, clip (0, 100) | `11_rh3-dingli.log` |
-| 12 | `apply_set_missing.py` | `apply_set_missing_rh4-selmun.py` | Selmun RH 2014-07-01 to 2025-12-31 | `12_rh4-selmun.log` |
-| 13 | `homogenize.py` | `homogenize-temp1.py` | TAV at all stations, additive, min_seg 18, anchor last | `13_temp1.log` |
-| 14 | `homogenize.py` | `homogenize-temp2.py` | TAV at Luqa, Dingli, and Selmun, additive, min_seg 12, anchor last | `14_temp2a-homogenize.log` |
-| 15 | `apply_set_missing.py` | `apply_set_missing_temp3-luqa.py` | Luqa TAV 2015-12-01 to 2016-01-31 (1–2 month cold transient) | `15_temp3a-luqa.log` |
-| 16 | `fix_giordan_stub.py` | same | STUB 2007-01-01 to 2008-11-30, REF 2012-01-01 to 2014-12-31; +2.309 °C | `16_temp3b-giordan.log` |
-| – | `era5_minmax_monthly.py` | same | ERA5 daily maximum and minimum 2 m temperature (CDS daily statistics); download stopped (TMX 2007–2024, TMN 2007 only) and never averaged to monthly, so not used | none |
-| 17 | `apply_set_missing.py` | `apply_set_missing_temp4-luqa.py` | Luqa TAV 2015-10-01 to 2015-11-30, then 2015-09-25 to 2015-11-30 (cold drift before the December 2015 failure); two runs | `17_temp4-luqa.log` |
-| 18 | `homogenize_segments.py` | `homogenize_segments-temp5-giordan.py` | Giordan TAV, additive; segments 2007-01 to 2008-12, 2011-01 to 2014-07, 2014-08 to 2022-12; reference: third | `18_temp5-giordan.log` |
-| 19 | `homogenize.py` | `homogenize-ws1.py` | WS, additive, min_seg 18; Valletta anchor last, Msida anchor first | `19_ws1.log` |
-| 20 | `homogenize_segments.py` | `homogenize_segments-ws2-xaghra.py`, `homogenize_segments-ws2-selmun.py` | WS, multiplicative; Xagħra segments 2008-01 to 2011-12, 2012-07 to 2015-12, 2016-01 to 2025-12; Selmun 2008-01 to 2011-12, 2012-06 to 2015-12, 2016-04 to 2022-06; reference: third; two runs | `20_ws2.log` |
-| 21 | `flag_solar_outliers.py` | same | QUANTILE 0.99, MARGIN 1.10, SMOOTH 10; dry run, then APPLY True; 6 Luqa values, spring 2019 | `21_solar4-outliers.log` |
-| 22 | `apply_corrections.py` | same | TMX and TMN inherit the TAV adjustments (steps 13–18); gust inherits WS (steps 19–20); RESET_FROM_RAW True | `22_max-min-gust.log` |
-| 23 | `wind_direction_qc.py`, `flag_low_speed_directions.py`, `wind_dir_corruption_check.py`, `plot_windrose_period_panel.py`, `apply_corrections.py` | same | Wind direction (QC only, not homogenized). (a) Directions of 0° during calm (≤0.5 m/s) set missing. (b) 2013–2015 directions with wind speed ≤2.0 m/s set missing (listed in `wind_dir_flags.csv`); this reduced but did not remove the bias. (c) Per-station check of directions falling in sectors rare in the good years; (d) wind roses for 2007–2012, 2013–2015, and 2016–2025. (e) 2013-01-01 to 2015-12-31 set missing at XR, XW, SL, DN, VL, LQ, and BN (northward vane bias, also in strong wind); GD unchanged | none (rows in `Changes_summary.csv`) |
-| 24 | `snht_TS_ERA5.py` | same | Final test of the homogenized data | `v2_homogenized/`, `Fig2_snht_era5_summary.png` |
+| Step | Script | Configuration | Output |
+|---|---|---|---|
+| 1 | `apply_step_fix.py` | Xewkija Pressure, BREAK 2015-11; −11.87 hPa from 2015-12 | `01_pressure-xewkija.log` |
+| 2 | `apply_set_missing.py` | Solar set missing: Msida 2012-12-21 to 2013-12-30; Luqa 2014-12-22 to 2015-12-31 (dead pyranometer) | `02_solar1.log` |
+| 3 | `apply_step_fix.py` | Luqa Pressure, BREAK 2015-11; −1.14 hPa from 2015-12 (residual break remained) | `03_pressure-luqa1.log` |
+| 4 | `homogenize_steps.py` | Luqa Pressure, MIN_SEG 24, ANCHOR last; breaks 2012-03 and 2019-01 | `04_pressure-luqa2.log` |
+| 5 | `homogenize.py` | Solar, multiplicative, anchor last; Luqa (min_seg 18), Xagħra (12), Msida (18) | `05_solar2.log` |
+| 6 | `apply_set_missing.py` | Msida Solar 2007-01-01 to 2007-08-31 (record-start spike, too short to scale) | `06_solar3.log` |
+| 7 | `rh_saturation_scan.py` | THRESH 99.5%, FLAG_FRAC 0.15; report only | `07_rh0-sat-scan.log` |
+| 8 | `apply_set_missing.py` | RH saturated spans: BN 2019-03 to 2021-11; SL 2018-01 to 2022-12; VL 2018-04 to 2018-06; XR 2017-08 to 2020-12; XW 2019-03 to 2022-09 | `08_rh1.log` |
+| 9 | `homogenize.py` | RH at all stations, additive, min_seg 18, anchor last, clip (0, 100) | `09_rh2.log` |
+| 10 | `apply_set_missing.py` | Selmun RH 2017-07-01 to 2025-12-31 (jump at record end) | `10_rh3-selmun.log` |
+| 11 | `homogenize.py` | Dingli RH, additive, min_seg 12, anchor first, clip (0, 100) | `11_rh3-dingli.log` |
+| 12 | `apply_set_missing.py` | Selmun RH 2014-07-01 to 2025-12-31 | `12_rh4-selmun.log` |
+| 13 | `homogenize.py` | TAV at all stations, additive, min_seg 18, anchor last | `13_temp1.log` |
+| 14 | `homogenize.py` | TAV at Luqa, Dingli, and Selmun, additive, min_seg 12, anchor last | `14_temp2a-homogenize.log` |
+| 15 | `apply_set_missing.py` | Luqa TAV 2015-12-01 to 2016-01-31 (1–2 month cold transient) | `15_temp3a-luqa.log` |
+| 16 | `fix_giordan_stub.py` | STUB 2007-01-01 to 2008-11-30, REF 2012-01-01 to 2014-12-31; +2.309 °C | `16_temp3b-giordan.log` |
+| – | `ref-data/era5_minmax_monthly.py` | ERA5 daily maximum and minimum 2 m temperature (CDS daily statistics); download stopped (TMX 2007–2024, TMN 2007 only) and never averaged to monthly, so not used | none |
+| 17 | `apply_set_missing.py` | Luqa TAV 2015-10-01 to 2015-11-30, then 2015-09-25 to 2015-11-30 (cold drift before the December 2015 failure); two runs | `17_temp4-luqa.log` |
+| 18 | `homogenize_segments.py` | Giordan TAV, additive; segments 2007-01 to 2008-12, 2011-01 to 2014-07, 2014-08 to 2022-12; reference: third | `18_temp5-giordan.log` |
+| 19 | `homogenize.py` | WS, additive, min_seg 18; Valletta anchor last, Msida anchor first | `19_ws1.log` |
+| 20 | `homogenize_segments.py` | WS, multiplicative; Xagħra segments 2008-01 to 2011-12, 2012-07 to 2015-12, 2016-01 to 2025-12; Selmun 2008-01 to 2011-12, 2012-06 to 2015-12, 2016-04 to 2022-06; reference: third; two runs | `20_ws2.log` |
+| 21 | `flag_solar_outliers.py` | QUANTILE 0.99, MARGIN 1.10, SMOOTH 10; dry run, then APPLY True; 6 Luqa values, spring 2019 | `21_solar4-outliers.log` |
+| 22 | `apply_corrections.py` | TMX and TMN inherit the TAV adjustments (steps 13–18); gust inherits WS (steps 19–20); RESET_FROM_RAW True | `22_max-min-gust.log` |
+| 23 | `wind_direction_qc.py`, `flag_low_speed_directions.py`, `wind_dir_corruption_check.py`, `plot_windrose_period_panel.py`, `apply_corrections.py` | Wind direction (QC only, not homogenized; the first three scripts are not in this repository). (a) Directions of 0° during calm (≤0.5 m/s) set missing. (b) 2013–2015 directions with wind speed ≤2.0 m/s set missing (listed in `wind_dir_flags.csv`); this reduced but did not remove the bias. (c) Per-station check of directions falling in sectors rare in the good years; (d) wind roses for 2007–2012, 2013–2015, and 2016–2025. (e) 2013-01-01 to 2015-12-31 set missing at XR, XW, SL, DN, VL, LQ, and BN (northward vane bias, also in strong wind); GD unchanged | none (rows in `Changes_summary.csv`) |
+| 24 | `snht_TS_ERA5.py` | Final test of the homogenized data | `v2_homogenized/` (its summary was Fig. 2 of the submitted manuscript) |
 
 A copy of `apply_step_fix.py` set to a Luqa pressure break at 2012-03 was prepared after step 3 but not used: step 4 found that break together with a second one, and `04_pressure-luqa2.log` starts from the T0 left by step 3 (27.5).
 
@@ -61,11 +61,13 @@ A copy of `apply_step_fix.py` set to a Luqa pressure break at 2012-03 was prepar
 
 | Step | Script | Configuration | Output |
 |---|---|---|---|
-| 25 | `download_merra2.sh`, `merge_merra2.py` | MERRA-2 M2SDNXSLV (daily), M2TMNXSLV and M2TMNXRAD (monthly), 2007–2025 | `Data/MERRA2/` |
+| 25 | `ref-data/download_merra2.sh`, `ref-data/download_merra2_malta.sh`, `ref-data/merge_merra2.py` | MERRA-2 M2SDNXSLV (daily), M2TMNXSLV and M2TMNXRAD (monthly), 2007–2025 | `Data/MERRA2/` |
 | 26 | `snht_TS_ERA5.py` | v2 data re-tested with critical values from Khaliq and Ouarda (2007), 5%; shift per break; TMX and TMN tested against ERA5 mean 2 m temperature anomalies (the ERA5 daily extremes download was incomplete) | `v3_corrected-CV/` |
 | 27 | `snht_TS_MERRA2.py` | Same test against MERRA-2, with TMX and TMN against MERRA-2 daily extremes | `v3_corrected-CV/` |
 | 28 | `apply_residual_fixes.py` | `python apply_residual_fixes.py 3-10`: rounds 3 to 10 in order, from the v2 data (`FIXES[3]` to `FIXES[10]`; 24, 9, 6, 1, 2, 2, 7, and 1 fixes) | `23_residual_fixes.log` to `30_residual_fixes_r10.log`, `residual_fixes_summary*.csv` |
 | 29 | `snht_TS_ERA5.py`, `snht_TS_MERRA2.py` | Final test | `v4_homogenized/` |
+| 30 | `Fig2_snht_summary.py` | Final SNHT summary against (a) ERA5 and (b) MERRA-2, on one colour scale | `Fig2_snht_summary.png` |
+| 31 | `compare_raw_final.py` | Station means of every variable in the original and the final data: difference, rank, and inter-station range (effect of the homogenization on the spatial patterns) | `v4_homogenized/compare_raw_final.csv` |
 
 Each round's fixes come from re-testing the output of the previous round with both SNHT scripts; only the final test is kept. Each SNHT run reports only the largest break per series, so removing it can reveal the next.
 
@@ -78,12 +80,13 @@ The script holds only the corrections that were kept, and all rounds were re-run
 
 ## Folders
 
-- `scripts/`: all scripts above.
+- `scripts/`: all scripts above; the reference-data download and preparation scripts are in `scripts/ref-data/`.
 - `change_logs/`: console output of each correction run, numbered in run order, plus the adjustment summaries.
 - `v1_originals/`: SNHT results and figures for the original data.
 - `v2_homogenized/`: SNHT results after rounds 1–2 (critical values close to the 1% level).
 - `v3_corrected-CV/`: the v2 data re-tested at the corrected 5% critical values against ERA5 and MERRA-2; shows the residual breaks that rounds 3–10 remove.
 - `v4_homogenized/`: SNHT results against ERA5 and MERRA-2 for the final data.
+- `Fig2_snht_summary.png`: Fig. 2 of the paper. `windrose_period_panel.png` and `wind_dir_line_vs_scatter.png`: the wind-direction check (step 23).
 
 ## References
 

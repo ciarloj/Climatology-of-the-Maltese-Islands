@@ -1,12 +1,12 @@
-station,variable,start,end,type,value,comment
+﻿station,variable,start,end,type,value,comment
 Luqa,Pressure,01/12/2015,31/12/2025,additive,-1.14, +1.14 offset after 2015-11
 Luqa,Pressure,01/01/2007,31/03/2012,additive,0.1,offset applied to range to fix breaking point
 Luqa,Pressure,01/04/2012,31/01/2019,additive,-0.17,offset applied to range to fix breaking point
 Xewkija,Pressure,01/12/2015,31/12/2025,additive,-11.87,offset applied to range to fix breaking point
-Beng?ajsa,Relative Humidity,01/03/2019,30/11/2021,missing,nan,"sensor pinned at 100% (saturated, unrecoverable)"
+Bengħajsa,Relative Humidity,01/03/2019,30/11/2021,missing,nan,"sensor pinned at 100% (saturated, unrecoverable)"
 Selmun,Relative Humidity,01/01/2018,31/12/2022,missing,nan,"sensor pinned at 100% (saturated, unrecoverable)"
 Valletta,Relative Humidity,01/04/2018,30/06/2018,missing,nan,"sensor pinned at 100% (saturated, unrecoverable)"
-Xag?ra,Relative Humidity,01/08/2017,31/12/2020,missing,nan,"sensor pinned at 100% (saturated, unrecoverable)"
+Xagħra,Relative Humidity,01/08/2017,31/12/2020,missing,nan,"sensor pinned at 100% (saturated, unrecoverable)"
 Xewkija,Relative Humidity,01/03/2019,30/09/2022,missing,nan,"sensor pinned at 100% (saturated, unrecoverable)"
 Luqa,Relative Humidity,01/01/2007,30/04/2009,additive,-0.34,"Breaks detected (4): 2009-04, 2015-05, 2018-04, 2022-11"
 Luqa,Relative Humidity,01/05/2009,31/05/2015,additive,1.86,"Breaks detected (4): 2009-04, 2015-05, 2018-04, 2022-11"
@@ -23,15 +23,15 @@ Xewkija,Relative Humidity,01/01/2007,31/08/2010,additive,4.51,"Breaks detected (
 Xewkija,Relative Humidity,01/09/2010,29/02/2012,additive,2.43,"Breaks detected (4): 2010-08, 2012-02, 2015-11, 2022-11"
 Xewkija,Relative Humidity,01/03/2012,30/11/2015,additive,-0.51,"Breaks detected (4): 2010-08, 2012-02, 2015-11, 2022-11"
 Xewkija,Relative Humidity,01/12/2015,30/11/2022,additive,-9.51,"Breaks detected (4): 2010-08, 2012-02, 2015-11, 2022-11"
-Beng?ajsa,Relative Humidity,01/01/2007,29/02/2016,additive,0.29,"Breaks detected (2): 2016-02, 2019-02"
-Beng?ajsa,Relative Humidity,01/03/2016,28/02/2019,additive,-10.14,"Breaks detected (2): 2016-02, 2019-02"
+Bengħajsa,Relative Humidity,01/01/2007,29/02/2016,additive,0.29,"Breaks detected (2): 2016-02, 2019-02"
+Bengħajsa,Relative Humidity,01/03/2016,28/02/2019,additive,-10.14,"Breaks detected (2): 2016-02, 2019-02"
 Dingli,Relative Humidity,01/01/2007,30/11/2012,additive,-0.67,"Breaks detected (3): 2012-11, 2015-02, 2022-01"
 Dingli,Relative Humidity,01/12/2012,28/02/2015,additive,3.58,"Breaks detected (3): 2012-11, 2015-02, 2022-01"
 Dingli,Relative Humidity,01/03/2015,31/01/2022,additive,-12.22,"Breaks detected (3): 2012-11, 2015-02, 2022-01"
 Dingli,Relative Humidity,01/08/2024,31/12/2025,additive,-4.41,Breaks detected (1): 2024-07
-Xag?ra,Relative Humidity,01/01/2007,30/09/2013,additive,0.69,"Breaks detected (3): 2013-09, 2016-03, 2022-10"
-Xag?ra,Relative Humidity,01/10/2013,31/03/2016,additive,-2.28,"Breaks detected (3): 2013-09, 2016-03, 2022-10"
-Xag?ra,Relative Humidity,01/04/2016,31/10/2022,additive,-10.33,"Breaks detected (3): 2013-09, 2016-03, 2022-10"
+Xagħra,Relative Humidity,01/01/2007,30/09/2013,additive,0.69,"Breaks detected (3): 2013-09, 2016-03, 2022-10"
+Xagħra,Relative Humidity,01/10/2013,31/03/2016,additive,-2.28,"Breaks detected (3): 2013-09, 2016-03, 2022-10"
+Xagħra,Relative Humidity,01/04/2016,31/10/2022,additive,-10.33,"Breaks detected (3): 2013-09, 2016-03, 2022-10"
 Giordan,Relative Humidity,01/01/2007,31/08/2013,additive,1.93,"Breaks detected (2): 2013-08, 2017-01"
 Giordan,Relative Humidity,01/09/2013,31/01/2017,additive,8.72,"Breaks detected (2): 2013-08, 2017-01"
 Selmun,Relative Humidity,01/07/2014,31/12/2025,missing,nan,spurious jump at record end (<6 months)
@@ -39,9 +39,9 @@ Birkirkara,Solar,21/12/2012,30/12/2013,missing,nan,dead/degraded pyranometer
 Luqa,Solar,22/12/2014,31/12/2015,missing,nan,dead/degraded pyranometer
 Luqa,Solar,01/01/2007,31/01/2016,multiplicative,x0.976,"Breaks detected (2): 2016-01, 2019-04"
 Luqa,Solar,01/02/2016,30/04/2019,multiplicative,x1.562,"Breaks detected (2): 2016-01, 2019-04"
-Xag?ra,Solar,01/01/2007,30/09/2012,multiplicative,x0.982,"Breaks detected (3): 2012-09, 2014-12, 2019-07"
-Xag?ra,Solar,01/10/2012,31/12/2014,multiplicative,x1.028,"Breaks detected (3): 2012-09, 2014-12, 2019-07"
-Xag?ra,Solar,01/01/2015,31/07/2019,multiplicative,x0.853,"Breaks detected (3): 2012-09, 2014-12, 2019-07"
+Xagħra,Solar,01/01/2007,30/09/2012,multiplicative,x0.982,"Breaks detected (3): 2012-09, 2014-12, 2019-07"
+Xagħra,Solar,01/10/2012,31/12/2014,multiplicative,x1.028,"Breaks detected (3): 2012-09, 2014-12, 2019-07"
+Xagħra,Solar,01/01/2015,31/07/2019,multiplicative,x0.853,"Breaks detected (3): 2012-09, 2014-12, 2019-07"
 Birkirkara,Solar,01/01/2007,31/05/2010,multiplicative,x1.206,Breaks detected (1): 2010-05
 Birkirkara,Solar,01/01/2007,31/08/2007,missing,nan,"record-start high spike (<1yr; SNHT end-effect, too short to scale)"
 Luqa,Solar,25/03/2019,-,missing,nan,"outlier value, exceeds x1.10 of 99% "
@@ -50,8 +50,8 @@ Luqa,Solar,27/04/2019,-,missing,nan,"outlier value, exceeds x1.10 of 99% "
 Luqa,Solar,28/04/2019,-,missing,nan,"outlier value, exceeds x1.10 of 99% "
 Luqa,Solar,29/04/2019,-,missing,nan,"outlier value, exceeds x1.10 of 99% "
 Luqa,Solar,30/04/2019,-,missing,nan,"outlier value, exceeds x1.10 of 99% "
-Beng?ajsa,Temperature/Max/Min,01/01/2007,31/12/2015,additive,0.44,"Breaks detected (2): 2015-12, 2023-10"
-Beng?ajsa,Temperature/Max/Min,01/01/2016,31/10/2023,additive,0.24,"Breaks detected (2): 2015-12, 2023-10"
+Bengħajsa,Temperature/Max/Min,01/01/2007,31/12/2015,additive,0.44,"Breaks detected (2): 2015-12, 2023-10"
+Bengħajsa,Temperature/Max/Min,01/01/2016,31/10/2023,additive,0.24,"Breaks detected (2): 2015-12, 2023-10"
 Dingli,Temperature/Max/Min,01/01/2007,31/08/2014,additive,0.31,Breaks detected (1): 2014-08
 Dingli,Temperature/Max/Min,01/01/2007,31/03/2010,additive,-0.29,Breaks detected (1): 2010-03
 Giordan,Temperature/Max/Min,01/01/2007,31/07/2014,additive,-1.7,Breaks detected (1): 2014-07
@@ -69,30 +69,30 @@ Selmun,Temperature/Max/Min,01/01/2007,30/06/2012,additive,0.53,Breaks detected (
 Selmun,Temperature/Max/Min,01/01/2007,30/04/2008,additive,-0.31,Breaks detected (1): 2008-04
 Valletta,Temperature/Max/Min,01/01/2007,31/05/2011,additive,-0.2,"Breaks detected (2): 2011-05, 2014-09"
 Valletta,Temperature/Max/Min,01/06/2011,30/09/2014,additive,0.24,"Breaks detected (2): 2011-05, 2014-09"
-Xag?ra,Temperature/Max/Min,01/01/2007,30/04/2021,additive,0.23,Breaks detected (1): 2021-04
-Xewkija,Temperature/Max/Min,01/01/2007,2010-0228,additive,0.17,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
+Xagħra,Temperature/Max/Min,01/01/2007,30/04/2021,additive,0.23,Breaks detected (1): 2021-04
+Xewkija,Temperature/Max/Min,01/01/2007,28/02/2010,additive,0.17,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
 Xewkija,Temperature/Max/Min,01/03/2010,31/05/2012,additive,0.39,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
 Xewkija,Temperature/Max/Min,01/06/2012,31/05/2019,additive,0.04,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
 Xewkija,Temperature/Max/Min,01/06/2019,31/10/2023,additive,-0.36,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
 Valletta,Wind speed/Gust,01/01/2007,30/11/2013,additive,-1.461,Breaks detected (1): 2013-11
 Birkirkara,Wind speed/Gust,01/12/2012,31/12/2025,additive,0.94,Breaks detected (1): 2012-11
-Xag?ra,Wind speed/Gust,01/01/2008,31/12/2011,multiplicative,x1.039,S1 2008-01..2011-12: n=45  -> factor x1.039
-Xag?ra,Wind speed/Gust,01/07/2012,31/12/2015,multiplicative,x1.783,S2 2012-07..2015-12: n=42  -> factor x1.783
+Xagħra,Wind speed/Gust,01/01/2008,31/12/2011,multiplicative,x1.039,S1 2008-01..2011-12: n=45  -> factor x1.039
+Xagħra,Wind speed/Gust,01/07/2012,31/12/2015,multiplicative,x1.783,S2 2012-07..2015-12: n=42  -> factor x1.783
 Selmun,Wind speed/Gust,01/01/2008,31/12/2011,multiplicative,x1.151,S1 2008-01..2011-12: n=48  -> factor x1.151
 Selmun,Wind speed/Gust,01/06/2012,31/12/2015,multiplicative,x1.961,S2 2012-06..2015-12: n=43  -> factor x1.961
-Xag?ra,Wind direction,01/01/2013,31/12/2015,missing,nan,distribution inconsistent with periods prior and post
+Xagħra,Wind direction,01/01/2013,31/12/2015,missing,nan,distribution inconsistent with periods prior and post
 Xewkija,Wind direction,01/01/2013,31/12/2015,missing,nan,distribution inconsistent with periods prior and post
 Selmun,Wind direction,01/01/2013,31/12/2015,missing,nan,distribution inconsistent with periods prior and post
 Dingli,Wind direction,01/01/2013,31/12/2015,missing,nan,distribution inconsistent with periods prior and post
 Valletta,Wind direction,01/01/2013,31/12/2015,missing,nan,distribution inconsistent with periods prior and post
 Luqa,Wind direction,01/01/2013,31/12/2015,missing,nan,distribution inconsistent with periods prior and post
-Beng?ajsa,Wind direction,01/01/2013,31/12/2015,missing,nan,distribution inconsistent with periods prior and post
-Beng?ajsa,Max Temperature,01/01/2007,31/12/2015,additive,0.95,v3: TMX break 2015-12
-Beng?ajsa,Min Temperature,01/01/2007,31/03/2015,additive,-0.46,v3: TMN break 2015-03
-Beng?ajsa,Relative Humidity,01/01/2007,30/04/2018,additive,1.65,v3: RH break 2018-04
-Xag?ra,Max Temperature,01/01/2007,31/12/2015,additive,1.09,v3: TMX break 2015-12
-Xag?ra,Min Temperature,01/01/2007,29/02/2016,additive,-0.36,v3: TMN break 2016-02
-Xag?ra,Temperature,01/09/2024,31/12/2025,missing,nan,"v3: TAV break 2024-08; post-break segment 16 months (< 24-month minimum), too short to adjust"
+Bengħajsa,Wind direction,01/01/2013,31/12/2015,missing,nan,distribution inconsistent with periods prior and post
+Bengħajsa,Max Temperature,01/01/2007,31/12/2015,additive,0.95,v3: TMX break 2015-12
+Bengħajsa,Min Temperature,01/01/2007,31/03/2015,additive,-0.46,v3: TMN break 2015-03
+Bengħajsa,Relative Humidity,01/01/2007,30/04/2018,additive,1.65,v3: RH break 2018-04
+Xagħra,Max Temperature,01/01/2007,31/12/2015,additive,1.09,v3: TMX break 2015-12
+Xagħra,Min Temperature,01/01/2007,29/02/2016,additive,-0.36,v3: TMN break 2016-02
+Xagħra,Temperature,01/09/2024,31/12/2025,missing,nan,"v3: TAV break 2024-08; post-break segment 16 months (< 24-month minimum), too short to adjust"
 Luqa,Max Temperature,01/01/2007,31/08/2015,additive,1.01,v3: TMX break 2015-08
 Luqa,Temperature,01/01/2007,30/09/2015,additive,0.16,v3: TAV break 2015-09
 Luqa,Solar,01/01/2007,31/07/2007,missing,nan,v3: SR break 2007-07 at record start; 7 months too short for a gain factor
@@ -111,21 +111,21 @@ Birkirkara,Solar,01/01/2007,31/12/2012,multiplicative,1.027,v3: SR break 2012-12
 Valletta,Max Temperature,01/01/2007,31/12/2015,additive,0.38,v3: TMX break 2015-12
 Giordan,Max Temperature,01/12/2021,31/12/2022,missing,nan,"v3: TMX break 2021-11; 13 months before the record ends (2022-12), too short to adjust"
 Giordan,Temperature,01/12/2021,31/12/2022,missing,nan,"v3: TAV break 2021-11; 13 months before the record ends (2022-12), too short to adjust"
-Beng?ajsa,Max Temperature,01/01/2007,31/01/2008,missing,nan,v4: TMX break 2008-01 (MERRA-2 2007-12); 13-month start segment
-Beng?ajsa,Min Temperature,01/01/2007,31/08/2007,missing,nan,v4: TMN break 2007-08 (MERRA-2 2007-07); 8-month start segment
-Beng?ajsa,Relative Humidity,01/01/2007,30/09/2015,additive,-1.68,v4: RH break 2015-09 (MERRA-2 2015-08)
+Bengħajsa,Max Temperature,01/01/2007,31/01/2008,missing,nan,v4: TMX break 2008-01 (MERRA-2 2007-12); 13-month start segment
+Bengħajsa,Min Temperature,01/01/2007,31/08/2007,missing,nan,v4: TMN break 2007-08 (MERRA-2 2007-07); 8-month start segment
+Bengħajsa,Relative Humidity,01/01/2007,30/09/2015,additive,-1.68,v4: RH break 2015-09 (MERRA-2 2015-08)
 Dingli,Max Temperature,01/01/2007,30/04/2008,missing,nan,v4: TMX break 2008-04 (MERRA-2 significant at 2007-11); 16-month start segment
 Dingli,Relative Humidity,01/01/2007,31/03/2022,additive,-2.52,v4: RH break 2022-03 (MERRA-2 2022-01)
 Birkirkara,Max Temperature,01/01/2007,30/06/2023,additive,0.42,v4: TMX break 2023-06 (both references)
 Birkirkara,Solar,01/01/2007,31/05/2019,multiplicative,0.9727,v4: SR break 2019-05 (both references)
 Valletta,Max Temperature,01/01/2007,30/06/2023,additive,0.29,v4: TMX break 2023-06 (MERRA-2 significant at 2007-09)
-Xag?ra,Min Temperature,01/01/2007,31/10/2023,additive,-0.29,v4: TMN break 2023-10 (MERRA-2 significant at 2024-07)
+Xagħra,Min Temperature,01/01/2007,31/10/2023,additive,-0.29,v4: TMN break 2023-10 (MERRA-2 significant at 2024-07)
 Birkirkara,Max Temperature,01/01/2007,30/11/2007,missing,nan,v5: TMX break 2007-11 (MERRA-2 2007-09); 11-month start segment
 Birkirkara,Solar,01/04/2025,31/12/2025,missing,nan,v5: SR break 2025-03 (MERRA-2 2025-01); 9-month end segment
 Xewkija,Max Temperature,01/01/2007,31/01/2008,missing,nan,v5: TMX break 2008-01 (MERRA-2 significant at 2021-08); 13-month start segment
 Dingli,Max Temperature,01/01/2007,30/06/2023,additive,0.37,v5: TMX break 2023-06 (both references)
 Valletta,Max Temperature,01/01/2007,31/05/2013,additive,-0.22,v5: TMX break 2013-05 (both references)
-Xag?ra,Min Temperature,01/01/2007,30/09/2013,additive,0.13,v5: TMN break 2013-09 (both references)
+Xagħra,Min Temperature,01/01/2007,30/09/2013,additive,0.13,v5: TMN break 2013-09 (both references)
 Luqa,Solar,01/01/2007,31/10/2013,multiplicative,0.9824,v6: SR break 2013-10 (MERRA-2 2014-03)
 Giordan,Relative Humidity,01/02/2014,31/01/2015,missing,nan,"v7: 12 months between RH breaks 2014-01 (-), 2014-09 (+), and 2015-01 (+)"
 Xewkija,Max Temperature,01/02/2021,31/08/2021,missing,nan,v7: 7 months between TMX breaks 2021-01 (+) and 2021-08 (-)
@@ -137,5 +137,5 @@ Giordan,Relative Humidity,01/01/2007,30/11/2008,missing,,v9: RH break 2008-11 (b
 Xewkija,Max Temperature,01/01/2007,31/08/2017,additive,-0.17,v9: TMX break 2017-08 (MERRA-2 significant)
 Xewkija,Min Temperature,01/08/2024,31/12/2025,missing,,v9: TMN break 2024-07 (MERRA-2; ERA5 2025-03); 17-month end segment
 Luqa,Solar,01/01/2007,30/04/2021,multiplicative,1.0246,v9: SR break 2021-04 (MERRA-2; ERA5 2020-03)
-Beng?ajsa,Min Temperature,01/01/2007,30/09/2022,additive,-0.23,v9: TMN break 2022-09 (MERRA-2; ERA5 2025-03)
+Bengħajsa,Min Temperature,01/01/2007,30/09/2022,additive,-0.23,v9: TMN break 2022-09 (MERRA-2; ERA5 2025-03)
 Giordan,Temperature,01/01/2007,31/01/2014,additive,0.45,v10: TAV break 2014-01 (MERRA-2 2014-01)

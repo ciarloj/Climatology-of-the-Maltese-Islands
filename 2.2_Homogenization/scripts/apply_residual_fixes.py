@@ -107,6 +107,7 @@ FIXES = {3: [
     ("Daily_Dingli.csv",     "Min Temperature", START, "2016-05-31", "add", -0.25, "TMN break 2016-05"),
     # ---- TAV ----
     ("Daily_Luqa.csv",       "Temperature",     START, "2015-09-30", "add",  0.16, "TAV break 2015-09"),
+    ("Daily_Giordan.csv",    "Temperature",     "2021-12-01", "2022-12-31", "missing", None,
      "TAV break 2021-11; 13 months before the record ends (2022-12), too short to adjust"),
     ("Daily_Xagħra.csv",     "Temperature",     "2024-09-01", "2025-12-31", "missing", None,
      "TAV break 2024-08; post-break segment 16 months (< 24-month minimum), too short to adjust"),
@@ -121,7 +122,12 @@ FIXES = {3: [
     # ---- Wind (gust inherits the wind-speed fix, as in rounds 1-2) ----
     ("Daily_Selmun.csv",     "Wind Speed", START, "2017-02-28", "gain", -0.59, "WS break 2017-02 (gain factor)"),
     ("Daily_Selmun.csv",     "Wind Gust",  START, "2017-02-28", "inherit", "Wind Speed", "inherits the WS factor (same anemometer)"),
-]
+], 4: [
+    # ---- record-start segments shorter than 24 months: set missing ----
+    ("Daily_Bengħajsa.csv",  "Max Temperature", START, "2008-01-31", "missing", None,
+     "TMX break 2008-01 (MERRA-2 2007-12); 13-month start segment"),
+    ("Daily_Bengħajsa.csv",  "Min Temperature", START, "2007-08-31", "missing", None,
+     "TMN break 2007-08 (MERRA-2 2007-07); 8-month start segment"),
     ("Daily_Dingli.csv",     "Max Temperature", START, "2008-04-30", "missing", None,
      "TMX break 2008-04 (MERRA-2 significant at 2007-11); 16-month start segment"),
     # ---- TMX ----
@@ -129,7 +135,16 @@ FIXES = {3: [
     ("Daily_Valletta.csv",   "Max Temperature", START, "2023-06-30", "add",  0.29, "TMX break 2023-06 (MERRA-2 significant at 2007-09)"),
     # ---- TMN ----
     ("Daily_Xagħra.csv",     "Min Temperature", START, "2023-10-31", "add", -0.29, "TMN break 2023-10 (MERRA-2 significant at 2024-07)"),
+    # ---- RH ----
+    ("Daily_Dingli.csv",     "Relative Humidity", START, "2022-03-31", "add", -2.52, "RH break 2022-03 (MERRA-2 2022-01)"),
+    ("Daily_Bengħajsa.csv",  "Relative Humidity", START, "2015-09-30", "add", -1.68, "RH break 2015-09 (MERRA-2 2015-08)"),
+    # ---- Solar ----
+    ("Daily_Birkirkara.csv", "Solar", START, "2019-05-31", "gain", -5.72, "SR break 2019-05 (both references)"),
+    # Not corrected (one reference only): Luqa Solar (ERA5 2013-10; MERRA-2 2014-03, not
+    # significant), Giordan RH (ERA5 2014-01; MERRA-2 2020-09), Xewkija TMN (MERRA-2 2024-07;
     # ERA5 2025-03), Luqa Pressure and Valletta RH (MERRA-2 only, as in round 3).
+], 5: [
+    # ---- record-end segments shorter than 24 months: set missing ----
     ("Daily_Birkirkara.csv", "Max Temperature", START, "2007-11-30", "missing", None,
      "TMX break 2007-11 (MERRA-2 2007-09); 11-month start segment"),
     ("Daily_Xewkija.csv",    "Max Temperature", START, "2008-01-31", "missing", None,
@@ -137,10 +152,16 @@ FIXES = {3: [
     ("Daily_Birkirkara.csv", "Solar", "2025-04-01", "2025-12-31", "missing", None,
      "SR break 2025-03 (MERRA-2 2025-01); 9-month end segment"),
     # ---- TMX ----
+    ("Daily_Dingli.csv",     "Max Temperature", START, "2023-06-30", "add",  0.37, "TMX break 2023-06 (both references)"),
+    ("Daily_Valletta.csv",   "Max Temperature", START, "2013-05-31", "add", -0.22, "TMX break 2013-05 (both references)"),
+    # ---- TMN ----
+    ("Daily_Xagħra.csv",     "Min Temperature", START, "2013-09-30", "add",  0.13, "TMN break 2013-09 (both references)"),
     # Not corrected (one reference only, or the other more than 2 months away):
     # Bengħajsa RH (MERRA-2 2017-01; ERA5 2017-05), Luqa Solar (ERA5 2013-10; MERRA-2 2014-03),
     # Giordan RH (ERA5 only), Bengħajsa TMN, Dingli RH, Xewkija TMN, Luqa Pressure, and
     # Valletta RH (MERRA-2 only).
+], 6: [
+    ("Daily_Luqa.csv",       "Solar", START, "2013-10-31", "gain", -3.92, "SR break 2013-10 (MERRA-2 2014-03)"),
     # Not corrected (MERRA-2 only; ERA5 shows no break at that date): Luqa Pressure 2021-06
     # (+0.21 hPa), Bengħajsa RH 2017-01 (+2.1 %), Dingli RH 2018-04 (+1.9 %), Valletta RH
     # 2016-06 (+1.7 %), Bengħajsa TMN 2022-09 (-0.23 C), Xewkija TMN 2024-07 (-0.23 C).
