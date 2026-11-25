@@ -74,7 +74,7 @@ Xewkija,Temperature/Max/Min,01/01/2007,28/02/2010,additive,0.17,"Breaks detected
 Xewkija,Temperature/Max/Min,01/03/2010,31/05/2012,additive,0.39,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
 Xewkija,Temperature/Max/Min,01/06/2012,31/05/2019,additive,0.04,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
 Xewkija,Temperature/Max/Min,01/06/2019,31/10/2023,additive,-0.36,"Breaks detected (4): 2010-02, 2012-05, 2019-05, 2023-10"
-Valletta,Wind speed/Gust,01/01/2007,30/11/2013,additive,-1.461,Breaks detected (1): 2013-11
+Valletta,Wind speed/Gust,01/01/2007,30/11/2013,additive,2.3,Breaks detected (1): 2013-11
 Birkirkara,Wind speed/Gust,01/12/2012,31/12/2025,additive,0.94,Breaks detected (1): 2012-11
 Xagħra,Wind speed/Gust,01/01/2008,31/12/2011,multiplicative,x1.039,S1 2008-01..2011-12: n=45  -> factor x1.039
 Xagħra,Wind speed/Gust,01/07/2012,31/12/2015,multiplicative,x1.783,S2 2012-07..2015-12: n=42  -> factor x1.783

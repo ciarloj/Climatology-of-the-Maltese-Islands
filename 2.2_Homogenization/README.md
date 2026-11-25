@@ -10,7 +10,7 @@ Each station series was tested with the relative Standard Normal Homogeneity Tes
 - Rounds 1–2: correction scripts never overwrite their input. Each writes `Daily_<station>_corrected.csv`, which then replaced `Daily_<station>.csv` before the next step, so every step reads the output of the previous one. After each step, `snht_TS_ERA5.py` was rerun to check the result.
 - Rounds 3–10: `apply_residual_fixes.py` applies the fixes in place to the files in `Data`, starting from the v2 data (rounds 1–2 output).
 - GitHub holds one copy of each script, set to the configuration of its last run. The table below gives the configuration of every run, so any step can be reproduced by setting those values.
-- Every adjustment is listed in `change_logs/Changes_summary.csv` (rounds 1–2), `change_logs/residual_fixes_summary.csv` (round 3), and `residual_fixes_summary_r4.csv` to `_r8.csv` (rounds 4–8).
+- Every adjustment is listed in `change_logs/Changes_summary.csv`; rows from rounds 3–10 start their comment with v3 to v10..
 
 ## Run order
 
@@ -64,7 +64,7 @@ A copy of `apply_step_fix.py` set to a Luqa pressure break at 2012-03 was prepar
 | 25 | `ref-data/download_merra2.sh`, `ref-data/download_merra2_malta.sh`, `ref-data/merge_merra2.py` | MERRA-2 M2SDNXSLV (daily), M2TMNXSLV and M2TMNXRAD (monthly), 2007–2025 | `Data/MERRA2/` |
 | 26 | `snht_TS_ERA5.py` | v2 data re-tested with critical values from Khaliq and Ouarda (2007), 5%; shift per break; TMX and TMN tested against ERA5 mean 2 m temperature anomalies (the ERA5 daily extremes download was incomplete) | `v3_corrected-CV/` |
 | 27 | `snht_TS_MERRA2.py` | Same test against MERRA-2, with TMX and TMN against MERRA-2 daily extremes | `v3_corrected-CV/` |
-| 28 | `apply_residual_fixes.py` | `python apply_residual_fixes.py 3-10`: rounds 3 to 10 in order, from the v2 data (`FIXES[3]` to `FIXES[10]`; 24, 9, 6, 1, 2, 2, 7, and 1 fixes) | `23_residual_fixes.log` to `30_residual_fixes_r10.log`, `residual_fixes_summary*.csv` |
+| 28 | `apply_residual_fixes.py` | `python apply_residual_fixes.py 3-10`: rounds 3 to 10 in order, from the v2 data (`FIXES[3]` to `FIXES[10]`; 24, 9, 6, 1, 2, 2, 7, and 1 fixes) | `23_residual_fixes.log` to `30_residual_fixes_r10.log`; summary rows added to `Changes_summary.csv` |
 | 29 | `snht_TS_ERA5.py`, `snht_TS_MERRA2.py` | Final test | `v4_homogenized/` |
 | 30 | `Fig2_snht_summary.py` | Final SNHT summary against (a) ERA5 and (b) MERRA-2, on one colour scale | `Fig2_snht_summary.png` |
 | 31 | `compare_raw_final.py` | Station means of every variable in the original and the final data: difference, rank, and inter-station range (effect of the homogenization on the spatial patterns) | `v4_homogenized/compare_raw_final.csv` |

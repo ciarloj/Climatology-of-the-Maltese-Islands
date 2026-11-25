@@ -87,7 +87,7 @@ CORRECTIONS = [
       ( "Daily_Xewkija.csv",    "Min Temperature", "2012-06-01", "2019-05-31", "add", 0.04),
       ( "Daily_Xewkija.csv",    "Min Temperature", "2019-06-01", "2023-10-31", "add", -0.36),
     # ---- Wind Gust inheriting the Wind-Speed log ----
-      ( "Daily_Valletta.csv",   "Wind Gust",       "2007-01-01", "2013-11-30", "add", -1.461),
+      ( "Daily_Valletta.csv",   "Wind Gust",       "2007-01-01", "2013-11-30", "add", 2.30),
       ( "Daily_Birkirkara.csv", "Wind Gust",       "2012-12-01", "2025-12-31", "add", 0.94),
       ( "Daily_Xagħra.csv",     "Wind Gust",       "2008-01-01", "2011-12-31", "multiply", 1.039),
       ( "Daily_Xagħra.csv",     "Wind Gust",       "2012-07-01", "2015-12-31", "multiply", 1.783),
