@@ -6,9 +6,9 @@ Reuses the computation logic from plot_boxwhisker.py; only the drawing
 is retargeted to a shared grid of axes.
 
 Usage:
-    python3 figure_boxwhisker_panel.py
+    python3 Fig4_boxwhisker_panel.py
 
-Output: {workdir}/analysis/basic-stats/figure_boxwhisker_panel.png
+Output: {workdir}/analysis/basic-stats/Fig4_boxwhisker_panel.png
 """
 
 import os
@@ -239,7 +239,7 @@ def main():
                ncol=4, fontsize=10, frameon=True)
 
     fig.tight_layout(rect=[0, 0, 1, 0.96])   # leave headroom for the legend
-    out_path = f"{workdir}/analysis/basic-stats/figure_boxwhisker_panel.png"
+    out_path = f"{workdir}/analysis/basic-stats/Fig4_boxwhisker_panel.png"
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     fig.savefig(out_path, dpi=200, bbox_inches="tight")
     plt.close(fig)

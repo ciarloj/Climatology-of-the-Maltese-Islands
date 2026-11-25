@@ -6,9 +6,9 @@ Reuses the computation logic from plot_annual_cycle_indices.py; only the
 drawing is retargeted to a shared grid of axes.
 
 Usage:
-    python3 figure_indices_panel.py
+    python3 Fig6_indices_panel.py
 
-Output: {workdir}/analysis/annual-cycle/figure_indices_panel.png
+Output: {workdir}/analysis/annual-cycle/Fig6_indices_panel.png
 """
 
 import os
@@ -288,7 +288,7 @@ def main():
                frameon=True, handlelength=1.6)
 
     fig.tight_layout(rect=[0, 0, 1, 0.95])
-    out_path = f"{workdir}/analysis/annual-cycle/figure_indices_panel.png"
+    out_path = f"{workdir}/analysis/annual-cycle/Fig6_indices_panel.png"
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     fig.savefig(out_path, dpi=200, bbox_inches="tight")
     plt.close(fig)
