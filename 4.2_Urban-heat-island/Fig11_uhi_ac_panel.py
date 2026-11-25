@@ -6,9 +6,9 @@ stacked panel with a single shared legend and a shared bottom x-axis.
 Reuses the computation logic from plot_uhi_annual_cycle.py.
 
 Usage:
-    python3 figure_uhi_panel.py
+    python3 Fig11_uhi_panel.py
 
-Output: {workdir}/analysis/uhi/figure_uhi_panel.png
+Output: {workdir}/analysis/uhi/Fig11_uhi_panel.png
 """
 
 import os
@@ -224,7 +224,7 @@ def main():
 
     fig.tight_layout(rect=[0, 0, 1, 0.96])
     fig.align_ylabels(axes[:, 0])
-    fname = ("figure_uhi_panel.png" if ELEVATION_ADJUST
+    fname = ("Fig11_uhi_panel.png" if ELEVATION_ADJUST
              else "figure_uhi_panel_no-elevation-adj.png")
     out_path = os.path.join(OUTPUT_DIR, fname)
     os.makedirs(OUTPUT_DIR, exist_ok=True)
