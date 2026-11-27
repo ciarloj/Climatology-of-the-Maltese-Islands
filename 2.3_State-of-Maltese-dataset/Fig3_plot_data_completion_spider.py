@@ -266,7 +266,7 @@ def create_spider_plot(data, stations, mode, output_dir):
     os.makedirs(output_dir, exist_ok=True)
     fname    = f"Fig3_spider_data-completion_{mode}.png"
     out_path = os.path.join(output_dir, fname)
-    plt.savefig(out_path, dpi=150, bbox_inches="tight")
+    plt.savefig(out_path, dpi=600, bbox_inches="tight")
     plt.close(fig)
     print(f"\n[saved] {out_path}")
 

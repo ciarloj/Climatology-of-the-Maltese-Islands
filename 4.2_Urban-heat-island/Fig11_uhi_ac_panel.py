@@ -228,7 +228,7 @@ def main():
              else "figure_uhi_panel_no-elevation-adj.png")
     out_path = os.path.join(OUTPUT_DIR, fname)
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    fig.savefig(out_path, dpi=200)
+    fig.savefig(out_path, dpi=600)
     plt.close(fig)
     print(f"[saved] {out_path}")
 

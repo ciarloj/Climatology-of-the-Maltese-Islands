@@ -7,9 +7,9 @@ drawing is retargeted to a shared 2x2 grid, with per-panel colourbars
 placed inside each axes.
 
 Usage:
-    python3 figure_coastal_scatter_panel.py
+    python3 Fig10_coastal_scatter_panel.py
 
-Output: {workdir}/analysis/coastal-scatter/figure_coastal_scatter_panel.png
+Output: {workdir}/analysis/coastal-scatter/Fig10_coastal_scatter_panel.png
 """
 
 import os
@@ -309,9 +309,9 @@ def main():
                      fontsize=10, fontweight="bold", loc="left")
 
     fig.tight_layout()
-    out_path = os.path.join(OUTPUT_DIR, "figure_coastal_scatter_panel.png")
+    out_path = os.path.join(OUTPUT_DIR, "Fig10_coastal_scatter_panel.png")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    fig.savefig(out_path, dpi=200)
+    fig.savefig(out_path, dpi=600)
     plt.close(fig)
     print(f"[saved] {out_path}")
 

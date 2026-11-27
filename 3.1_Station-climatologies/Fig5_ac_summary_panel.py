@@ -258,7 +258,7 @@ def main():
     fig.tight_layout(rect=[0, 0, 1, 0.93])   # headroom for the legend
     out_path = f"{workdir}/analysis/annual-cycle/Fig5_annual_cycle_panel.png"
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
-    fig.savefig(out_path, dpi=200, bbox_inches="tight")
+    fig.savefig(out_path, dpi=600, bbox_inches="tight")
     plt.close(fig)
     print(f"[saved] {out_path}")
 

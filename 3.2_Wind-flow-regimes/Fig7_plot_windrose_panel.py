@@ -257,7 +257,7 @@ def main():
         framealpha=0.9,
         bbox_to_anchor=(0.5, 1.02),
     )
-    plt.savefig(OUTPUT_PATH, dpi=150, bbox_inches="tight")
+    plt.savefig(OUTPUT_PATH, dpi=600, bbox_inches="tight")
     plt.close(fig)
     print(f"\n[saved] {os.path.abspath(OUTPUT_PATH)}")
 

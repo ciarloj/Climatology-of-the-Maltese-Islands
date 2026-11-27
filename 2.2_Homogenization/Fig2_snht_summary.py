@@ -79,7 +79,7 @@ def main():
     cbar = fig.colorbar(im, ax=axes, shrink=0.6, pad=0.02)
     cbar.set_label("T₀", fontsize=11)
 
-    fig.savefig(OUT, dpi=300, bbox_inches="tight")
+    fig.savefig(OUT, dpi=600, bbox_inches="tight")
     plt.close(fig)
     print(f"[saved] {os.path.abspath(OUT)}")
 

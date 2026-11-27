@@ -239,6 +239,18 @@ def draw_map(ax, varname, values, malta, show_xlabels, show_ylabels):
     cb.outline.set_linewidth(0.5)
 
 # ---------------------------------------------------------------------------
+# Station key (as in Fig. 1), scaled for a single panel
+# ---------------------------------------------------------------------------
+
+def add_legend_box(ax, stations, fontsize=8.5):
+    lines = [f"{s[1]:2s}  {s[0]:9s} ({s[4]:>3} m)" for s in stations]
+    ax.text(0.985, 0.975, "\n".join(lines), transform=ax.transAxes,
+            fontsize=fontsize, family="monospace", va="top", ha="right",
+            bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.85,
+                      edgecolor="#cccccc", linewidth=0.5),
+            zorder=10)
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -257,6 +269,8 @@ def main():
         is_left   = (col == 0)
         draw_map(ax, varname, values, malta,
                  show_xlabels=is_bottom, show_ylabels=is_left)
+        if letters[idx] == "b":
+            add_legend_box(ax, STATIONS)
         unit = UNITS.get(varname, "")
         ax.set_title(f"({letters[idx]}) {VARLABELS.get(varname, varname)} ({unit})",
                      fontsize=10, fontweight="bold", loc="left")
@@ -268,7 +282,7 @@ def main():
                     wspace=0.05, hspace=0.01)
     out_path = os.path.join(OUTPUT_DIR, "Fig8_spatial_panel.png")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    fig.savefig(out_path, dpi=200, bbox_inches="tight")
+    fig.savefig(out_path, dpi=600, bbox_inches="tight")
     plt.close(fig)
     print(f"[saved] {out_path}")
 

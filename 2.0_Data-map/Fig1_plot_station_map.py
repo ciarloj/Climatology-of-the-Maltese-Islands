@@ -5,13 +5,13 @@ Plots all meteorological stations on a map of Malta and Gozo.
 Station dots are coloured by elevation with an accompanying colorbar.
 
 Usage:
-    python3 plot_station_map.py
+    python3 Fig1_plot_station_map.py
 
 Requirements:
     pip install matplotlib cartopy numpy
     (cartopy pulls in shapely and handles coastlines automatically)
 
-Output: ../../analysis/station_map.png
+Output: ../../analysis/Fig1_station_map.png
 """
 
 import os
@@ -82,7 +82,7 @@ BORDER_COLOUR = "#8b7355"   # coastline colour
 LABEL_FONT    = 9
 LABEL_COLOUR  = "#1a1a2e"
 
-OUTPUT_PATH   = "/mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/analysis/spatial/station_map.png"
+OUTPUT_PATH   = "/mnt/d/Storage/James/Dropbox/PALEOSIM/Research/WP2/climate assessment/Maltese Islands Climate/analysis/spatial/Fig1_station_map.png"
 
 # ---------------------------------------------------------------------------
 # Map bounds — extend slightly beyond station extents
@@ -237,7 +237,7 @@ def main():
     plt.subplots_adjust(bottom=0.15)
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
-    plt.savefig(OUTPUT_PATH, dpi=300, bbox_inches="tight")
+    plt.savefig(OUTPUT_PATH, dpi=1000, bbox_inches="tight")
     plt.close(fig)
     print(f"[saved] {os.path.abspath(OUTPUT_PATH)}")
 
