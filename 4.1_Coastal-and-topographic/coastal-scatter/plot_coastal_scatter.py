@@ -134,7 +134,7 @@ VARLABELS = {
     "Precipitation":     "Annual Precipitation",
     "Pressure":          "Pressure",
     "Relative_Humidity": "Relative Humidity",
-    "Solar":             "Solar Radiance",
+    "Solar":             "Solar Radiation",
     "Temperature":       "Mean Temperature",
     "Wind_Speed":        "Wind Speed",
     "Wind_Gust":         "Wind Gust",

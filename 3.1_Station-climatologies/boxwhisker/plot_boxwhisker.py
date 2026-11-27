@@ -63,7 +63,7 @@ VARLABELS = {
     "Max_Temperature":   "Max Temperature",
     "Min_Temperature":   "Min Temperature",
     "Relative_Humidity": "Relative Humidity",
-    "Solar":             "Solar Radiance",
+    "Solar":             "Solar Radiation",
     "Wind_Direction":    "Wind Direction",
     "Wind_Gust":         "Wind Gust",
     "Wind_Speed":        "Wind Speed",
